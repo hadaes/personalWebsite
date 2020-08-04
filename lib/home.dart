@@ -7,17 +7,23 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String info1;
+  final int textAssetCount = 2;
 
-  Future<String> loadAsset() async {
-    return await rootBundle.loadString("assets/text/info-1.txt");
+  List<String> texts = new List(2);
+
+  Future<List<String>> loadAsset() async {
+    List<String> assetTexts = new List(textAssetCount);
+    for (int i = 0; i < textAssetCount; i++) {
+      assetTexts[i] = await rootBundle.loadString("assets/text/info-$i.txt");
+    }
+    return assetTexts;
   }
 
   @override
   void initState() {
     loadAsset().then((value) {
       setState(() {
-        info1 = value;
+        texts = value;
       });
     });
   }
@@ -59,7 +65,7 @@ class _HomeState extends State<Home> {
                 height: MediaQuery.of(context).size.height,
               ),
               Column(
-                children: [
+                children: <Widget>[
                   Container(
                     height: MediaQuery.of(context).size.height * 0.15,
                     width: double.infinity,
@@ -83,7 +89,7 @@ class _HomeState extends State<Home> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: <Widget>[
                       // left side
                       Container(
                         color: CupertinoColors.black,
@@ -91,7 +97,7 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width * 0.5,
                         child: Center(
                           child: Text(
-                            "$info1",
+                            "${texts[0]}",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: CupertinoColors.white,
@@ -106,7 +112,7 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width * 0.5,
                         child: Center(
                           child: Text(
-                            "Information",
+                            "${texts[1]}",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: CupertinoColors.black,
@@ -117,7 +123,7 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ],
-              )
+              ),
             ],
           ),
           Container(
