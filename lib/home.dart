@@ -85,7 +85,7 @@ class Home extends StatelessWidget {
                         width: MediaQuery.of(context).size.width * 0.5,
                         child: Center(
                           child: Text(
-                            "Give me a job please",
+                            "Information",
                             style: TextStyle(
                               color: CupertinoColors.black,
                             ),
