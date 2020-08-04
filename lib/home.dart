@@ -1,8 +1,27 @@
-import 'dart:html';
 import "package:flutter/cupertino.dart";
-import "dart:math";
+import "package:flutter/services.dart" show rootBundle;
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  String info1;
+
+  Future<String> loadAsset() async {
+    return await rootBundle.loadString("assets/text/info-1.txt");
+  }
+
+  @override
+  void initState() {
+    loadAsset().then((value) {
+      setState(() {
+        info1 = value;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -72,7 +91,7 @@ class Home extends StatelessWidget {
                         width: MediaQuery.of(context).size.width * 0.5,
                         child: Center(
                           child: Text(
-                            "Jack Scherlag is a Princeton Undergraduate",
+                            "$info1",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: CupertinoColors.white,
