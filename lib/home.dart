@@ -1,5 +1,6 @@
 import 'dart:html';
 import "package:flutter/cupertino.dart";
+import "dart:math";
 
 class Home extends StatelessWidget {
   @override
@@ -45,7 +46,7 @@ class Home extends StatelessWidget {
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: CupertinoColors.black,
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       border: Border.all(
                         color: CupertinoColors.white,
                       ),
@@ -72,6 +73,7 @@ class Home extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "Jack Scherlag is a Princeton Undergraduate",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               color: CupertinoColors.white,
                             ),
@@ -86,6 +88,7 @@ class Home extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "Information",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               color: CupertinoColors.black,
                             ),
@@ -99,7 +102,7 @@ class Home extends StatelessWidget {
             ],
           ),
           Container(
-            color: CupertinoColors.darkBackgroundGray,
+            color: CupertinoColors.extraLightBackgroundGray,
             height: MediaQuery.of(context).size.height * 0.15,
             child: Center(
               child: Text(
