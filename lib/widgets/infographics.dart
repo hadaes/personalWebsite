@@ -34,8 +34,8 @@ class _InfographicsState extends State<Infographics> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: CupertinoColors.white,
-                      fontSize: 25.0,
                     ),
+                    maxFontSize: 25.0,
                   ),
                 ),
               ),
@@ -48,8 +48,8 @@ class _InfographicsState extends State<Infographics> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: CupertinoColors.white,
-                      fontSize: 25.0,
                     ),
+                    maxFontSize: 25.0,
                   ),
                 ),
                 decoration: BoxDecoration(
@@ -66,8 +66,10 @@ class _InfographicsState extends State<Infographics> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: CupertinoColors.white,
-                      fontSize: 25.0,
                     ),
+                    maxFontSize: 25.0,
+                    presetFontSizes: [25.0, 20.0, 15.0, 10.0],
+                    maxLines: 2,
                   ),
                 ),
                 decoration: BoxDecoration(
