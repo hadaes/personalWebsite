@@ -1,5 +1,8 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/services.dart" show rootBundle;
+import "package:auto_size_text/auto_size_text.dart";
+import 'package:personalWebsite/widgets/infographics.dart';
+import 'package:personalWebsite/widgets/text_screen.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -35,7 +38,7 @@ class _HomeState extends State<Home> {
         children: <Widget>[
           Container(
             child: Center(
-              child: Text(
+              child: AutoSizeText(
                 "Jack Scherlag",
                 style: TextStyle(
                   color: CupertinoColors.white,
@@ -59,7 +62,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Stack(
-            children: [
+            children: <Widget>[
               Container(
                 color: CupertinoColors.darkBackgroundGray,
                 height: MediaQuery.of(context).size.height,
@@ -77,7 +80,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     child: Center(
-                      child: Text(
+                      child: AutoSizeText(
                         "About",
                         style: TextStyle(
                           color: CupertinoColors.white,
@@ -91,88 +94,11 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       // left side
-                      Container(
-                        color: CupertinoColors.black,
-                        height: MediaQuery.of(context).size.height * 0.9,
-                        width: MediaQuery.of(context).size.width * 0.5,
-                        child: Center(
-                          child: Text(
-                            "${texts[0]}",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: CupertinoColors.white,
-                            ),
-                          ),
-                        ),
+                      TextScreen(
+                        texts: texts,
                       ),
                       // right side
-                      Stack(
-                        children: <Widget>[
-                          Container(
-                            color: CupertinoColors.white,
-                            height: MediaQuery.of(context).size.height * 0.9,
-                            width: MediaQuery.of(context).size.width * 0.5,
-                          ),
-                          Positioned.fill(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.25,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.16,
-                                  decoration: BoxDecoration(
-                                    color: CupertinoColors.black,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      ">600 Flight Hours",
-                                      style: TextStyle(
-                                          color: CupertinoColors.white),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.25,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.16,
-                                  child: Center(
-                                    child: Text(
-                                      "1 US Patent",
-                                      style: TextStyle(
-                                          color: CupertinoColors.white),
-                                    ),
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: CupertinoColors.black,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                                Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.25,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.16,
-                                  child: Center(
-                                    child: Text(
-                                      "Gamer",
-                                      style: TextStyle(
-                                          color: CupertinoColors.white),
-                                    ),
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: CupertinoColors.black,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                      Infographics(),
                     ],
                   ),
                 ],
@@ -183,7 +109,7 @@ class _HomeState extends State<Home> {
             color: CupertinoColors.extraLightBackgroundGray,
             height: MediaQuery.of(context).size.height * 0.15,
             child: Center(
-              child: Text(
+              child: AutoSizeText(
                 "Copyright © Jack Scherlag 2020",
               ),
             ),
