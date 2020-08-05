@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
             height: MediaQuery.of(context).size.height * 0.08,
           ),
           Container(
-            width: (MediaQuery.of(context).size.width),
+            width: MediaQuery.of(context).size.width,
             color: CupertinoTheme.of(context).primaryColor,
             child: Center(
               child: Image(
@@ -106,19 +106,72 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       // right side
-                      Container(
-                        color: CupertinoColors.white,
-                        height: MediaQuery.of(context).size.height * 0.9,
-                        width: MediaQuery.of(context).size.width * 0.5,
-                        child: Center(
-                          child: Text(
-                            "${texts[1]}",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: CupertinoColors.black,
+                      Stack(
+                        children: <Widget>[
+                          Container(
+                            color: CupertinoColors.white,
+                            height: MediaQuery.of(context).size.height * 0.9,
+                            width: MediaQuery.of(context).size.width * 0.5,
+                          ),
+                          Positioned.fill(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.25,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.16,
+                                  decoration: BoxDecoration(
+                                    color: CupertinoColors.black,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      ">600 Flight Hours",
+                                      style: TextStyle(
+                                          color: CupertinoColors.white),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.25,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.16,
+                                  child: Center(
+                                    child: Text(
+                                      "1 US Patent",
+                                      style: TextStyle(
+                                          color: CupertinoColors.white),
+                                    ),
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: CupertinoColors.black,
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                                Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.25,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.16,
+                                  child: Center(
+                                    child: Text(
+                                      "Gamer",
+                                      style: TextStyle(
+                                          color: CupertinoColors.white),
+                                    ),
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: CupertinoColors.black,
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
@@ -131,7 +184,7 @@ class _HomeState extends State<Home> {
             height: MediaQuery.of(context).size.height * 0.15,
             child: Center(
               child: Text(
-                "Copyright Jack Scherlag 2020",
+                "Copyright © Jack Scherlag 2020",
               ),
             ),
           ),
