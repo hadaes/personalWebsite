@@ -34,6 +34,7 @@ class _InfographicsState extends State<Infographics> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: CupertinoColors.white,
+                      fontSize: 25.0,
                     ),
                   ),
                 ),
@@ -45,7 +46,10 @@ class _InfographicsState extends State<Infographics> {
                   child: AutoSizeText(
                     "1 US Patent",
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: CupertinoColors.white),
+                    style: TextStyle(
+                      color: CupertinoColors.white,
+                      fontSize: 25.0,
+                    ),
                   ),
                 ),
                 decoration: BoxDecoration(
@@ -62,6 +66,7 @@ class _InfographicsState extends State<Infographics> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: CupertinoColors.white,
+                      fontSize: 25.0,
                     ),
                   ),
                 ),

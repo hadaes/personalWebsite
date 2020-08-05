@@ -22,6 +22,7 @@ class _TextScreenState extends State<TextScreen> {
           textAlign: TextAlign.center,
           style: TextStyle(
             color: CupertinoColors.white,
+            fontSize: 20.0,
           ),
         ),
       ),
