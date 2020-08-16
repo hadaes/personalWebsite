@@ -1,10 +1,9 @@
 import "package:flutter/cupertino.dart";
-import "package:flutter/services.dart" show rootBundle;
 import "package:auto_size_text/auto_size_text.dart";
 
 class TextScreen extends StatefulWidget {
   @override
-  List<String> texts;
+  final List<String> texts;
   TextScreen({this.texts});
   _TextScreenState createState() => _TextScreenState();
 }
