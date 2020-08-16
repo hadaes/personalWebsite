@@ -1,8 +1,8 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/services.dart" show rootBundle;
 import "package:auto_size_text/auto_size_text.dart";
-import 'package:personalWebsite/widgets/infographics.dart';
-import 'package:personalWebsite/widgets/text_screen.dart';
+import "package:personalWebsite/widgets/infographics.dart";
+import "package:personalWebsite/widgets/text_screen.dart";
 
 class Home extends StatefulWidget {
   @override
@@ -42,13 +42,14 @@ class _HomeState extends State<Home> {
                 "Jack Scherlag",
                 style: TextStyle(
                   color: CupertinoColors.white,
-                  fontSize: 30.0,
                   fontWeight: FontWeight.w100,
                 ),
+                maxFontSize: 30.0,
+                presetFontSizes: [30.0, 25.0, 20.0, 15.0],
               ),
             ),
             color: CupertinoColors.black,
-            height: MediaQuery.of(context).size.height * 0.08,
+            height: MediaQuery.of(context).size.height * 0.1,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
@@ -56,7 +57,7 @@ class _HomeState extends State<Home> {
             child: Center(
               child: Image(
                 image: AssetImage(
-                  "assets/images/placeholder.jpg",
+                  "assets/images/heli.jpeg",
                 ),
               ),
             ),
@@ -70,7 +71,7 @@ class _HomeState extends State<Home> {
               Column(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.15,
+                    height: MediaQuery.of(context).size.height * 0.18,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: CupertinoColors.black,
