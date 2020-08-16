@@ -29,15 +29,19 @@ class _InfographicsState extends State<Infographics> {
                     shape: BoxShape.circle,
                   ),
                   child: Center(
-                    child: AutoSizeText(
-                      ">600 Flight Hours",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: CupertinoColors.white,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.09,
+                      alignment: Alignment.center,
+                      child: AutoSizeText(
+                        ">600 Flight Hours",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: CupertinoColors.white,
+                        ),
+                        maxFontSize: 25.0,
+                        presetFontSizes: [25.0, 20.0, 15.0, 10.0],
+                        maxLines: 3,
                       ),
-                      maxFontSize: 25.0,
-                      presetFontSizes: [25.0, 20.0, 15.0, 10.0],
-                      maxLines: 3,
                     ),
                   ),
                 ),
@@ -47,15 +51,19 @@ class _InfographicsState extends State<Infographics> {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.35,
                   child: Center(
-                    child: AutoSizeText(
-                      "1 US Patent",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: CupertinoColors.white,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.09,
+                      alignment: Alignment.center,
+                      child: AutoSizeText(
+                        "1 US Patent",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: CupertinoColors.white,
+                        ),
+                        maxFontSize: 25.0,
+                        presetFontSizes: [25.0, 20.0, 15.0, 10.0],
+                        maxLines: 2,
                       ),
-                      maxFontSize: 25.0,
-                      presetFontSizes: [25.0, 20.0, 15.0, 10.0],
-                      maxLines: 2,
                     ),
                   ),
                   decoration: BoxDecoration(
@@ -69,15 +77,19 @@ class _InfographicsState extends State<Infographics> {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.35,
                   child: Center(
-                    child: AutoSizeText(
-                      "Multi-instrumentalist",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: CupertinoColors.white,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.09,
+                      alignment: Alignment.center,
+                      child: AutoSizeText(
+                        "Multi-instrumentalist",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: CupertinoColors.white,
+                        ),
+                        maxFontSize: 25.0,
+                        presetFontSizes: [25.0, 20.0, 15.0, 10.0],
+                        maxLines: 2,
                       ),
-                      maxFontSize: 25.0,
-                      presetFontSizes: [25.0, 20.0, 15.0, 10.0],
-                      maxLines: 2,
                     ),
                   ),
                   decoration: BoxDecoration(
