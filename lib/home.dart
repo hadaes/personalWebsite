@@ -35,41 +35,19 @@ class _HomeState extends State<Home> {
       body: Stack(
         children: [
           Image(
-            image: AssetImage("assets/images/heli.jpeg"),
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            fit: BoxFit.cover,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-            child: Icon(
-              Icons.menu,
-              color: Colors.black,
-              size: 30,
-            ),
-          ),
-          Container(
-            child: AutoSizeText(
-              "Jack Scherlag",
-              style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontFamily: "Poppins",
+              image: AssetImage("assets/images/heli.jpeg"),
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover),
+          Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: AppBar(
+              title: AutoSizeText(
+                "Jack Scherlag",
+                style: TextStyle(color: Colors.black),
               ),
-              textAlign: TextAlign.center,
-              presetFontSizes: [
-                50.0,
-                40.0,
-                30.0,
-                25.0,
-                20.0,
-                15.0,
-                12.0,
-                10.0,
-                8.0
-              ],
+              backgroundColor: Colors.transparent,
             ),
-            color: Colors.black.withOpacity(0.0),
-            width: MediaQuery.of(context).size.width,
+            drawer: Drawer(),
           )
         ],
       ),
