@@ -1,8 +1,6 @@
-import "package:flutter/cupertino.dart";
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/material.dart';
 import "package:flutter/services.dart" show rootBundle;
-import "package:auto_size_text/auto_size_text.dart";
-import "package:personalWebsite/widgets/infographics.dart";
-import "package:personalWebsite/widgets/text_screen.dart";
 
 class Home extends StatefulWidget {
   @override
@@ -33,8 +31,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      child: Stack(
+    return Scaffold(
+      body: Stack(
         children: [
           Image(
             image: AssetImage("assets/images/heli.jpeg"),
@@ -42,100 +40,39 @@ class _HomeState extends State<Home> {
             height: MediaQuery.of(context).size.height,
             fit: BoxFit.cover,
           ),
-          Container(
-            child: Text(
-              "Jack Scherlag",
-              style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.w100),
-              textAlign: TextAlign.center,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+            child: Icon(
+              Icons.menu,
+              color: Colors.black,
+              size: 30,
             ),
-            color: CupertinoColors.black.withOpacity(0.0),
+          ),
+          Container(
+            child: AutoSizeText(
+              "Jack Scherlag",
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontFamily: "Poppins",
+              ),
+              textAlign: TextAlign.center,
+              presetFontSizes: [
+                50.0,
+                40.0,
+                30.0,
+                25.0,
+                20.0,
+                15.0,
+                12.0,
+                10.0,
+                8.0
+              ],
+            ),
+            color: Colors.black.withOpacity(0.0),
             width: MediaQuery.of(context).size.width,
           )
         ],
       ),
-      // child: ListView(
-      //   children: <Widget>[
-      //     Container(
-      //       child: Center(
-      //         child: AutoSizeText(
-      //           "Jack Scherlag",
-      //           style: TextStyle(
-      //             color: CupertinoColors.white,
-      //             fontWeight: FontWeight.w100,
-      //           ),
-      //           maxFontSize: 30.0,
-      //           presetFontSizes: [30.0, 25.0, 20.0, 15.0],
-      //         ),
-      //       ),
-      //       color: CupertinoColors.black,
-      //       height: MediaQuery.of(context).size.height * 0.1,
-      //     ),
-      //     Container(
-      //       width: MediaQuery.of(context).size.width,
-      //       color: CupertinoTheme.of(context).primaryColor,
-      //       child: Center(
-      //         child: Image(
-      //           image: AssetImage(
-      //             "assets/images/heli.jpeg",
-      //           ),
-      //         ),
-      //       ),
-      //     ),
-      //     Stack(
-      //       children: <Widget>[
-      //         Container(
-      //           color: CupertinoColors.darkBackgroundGray,
-      //           height: MediaQuery.of(context).size.height,
-      //         ),
-      //         Column(
-      //           children: <Widget>[
-      //             Container(
-      //               height: MediaQuery.of(context).size.height * 0.18,
-      //               width: double.infinity,
-      //               decoration: BoxDecoration(
-      //                 color: CupertinoColors.black,
-      //                 borderRadius: BorderRadius.circular(10),
-      //                 border: Border.all(
-      //                   color: CupertinoColors.white,
-      //                 ),
-      //               ),
-      //               child: Center(
-      //                 child: AutoSizeText(
-      //                   "About",
-      //                   style: TextStyle(
-      //                     color: CupertinoColors.white,
-      //                     letterSpacing: 3.0,
-      //                     fontWeight: FontWeight.w200,
-      //                   ),
-      //                 ),
-      //               ),
-      //             ),
-      //             Row(
-      //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //               children: <Widget>[
-      //                 // left side
-      //                 TextScreen(
-      //                   texts: texts,
-      //                 ),
-      //                 // right side
-      //                 Infographics(),
-      //               ],
-      //             ),
-      //           ],
-      //         ),
-      //       ],
-      //     ),
-      //     Container(
-      //       color: CupertinoColors.extraLightBackgroundGray,
-      //       height: MediaQuery.of(context).size.height * 0.15,
-      //       child: Center(
-      //         child: AutoSizeText(
-      //           "Copyright © Jack Scherlag 2020",
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
