@@ -66,6 +66,9 @@ flutter:
       fonts:
         - asset: assets/fonts/Merriweather-Bold.ttf
         - asset: assets/fonts/Merriweather-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-ExtraLight.ttf
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
