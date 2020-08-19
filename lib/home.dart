@@ -39,6 +39,7 @@ class _HomeState extends State<Home> {
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover),
           Scaffold(
+            drawerScrimColor: Colors.transparent,
             backgroundColor: Colors.transparent,
             appBar: AppBar(
               title: AutoSizeText(
@@ -47,7 +48,12 @@ class _HomeState extends State<Home> {
               ),
               backgroundColor: Colors.transparent,
             ),
-            drawer: Drawer(),
+            drawer: Theme(
+              data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+              child: Drawer(
+                elevation: 50,
+              ),
+            ),
           )
         ],
       ),
