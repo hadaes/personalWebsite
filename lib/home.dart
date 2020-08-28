@@ -37,6 +37,7 @@ class _HomeState extends State<Home> {
           Image(
               image: AssetImage("assets/images/heli.jpeg"),
               width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
               fit: BoxFit.cover),
           Scaffold(
             drawerScrimColor: Colors.transparent,
@@ -50,8 +51,11 @@ class _HomeState extends State<Home> {
             ),
             drawer: Theme(
               data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
-              child: Drawer(
-                elevation: 50,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.20,
+                child: Drawer(
+                  elevation: 50,
+                ),
               ),
             ),
           )
