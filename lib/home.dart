@@ -55,6 +55,18 @@ class _HomeState extends State<Home> {
                 width: MediaQuery.of(context).size.width * 0.20,
                 child: Drawer(
                   elevation: 50,
+                  child: ListView(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20.0),
+                        child: Center(child: AutoSizeText("About Me")),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20.0),
+                        child: Center(child: AutoSizeText("About This Site")),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
