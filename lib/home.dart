@@ -57,8 +57,11 @@ class _HomeState extends State<Home> {
                   elevation: 50,
                   child: ListView(
                     children: [
+                      SizedBox(
+                        height: 63, //approximate size of appbar
+                      ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20.0),
+                        padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
                         child: Center(child: AutoSizeText("About Me")),
                       ),
                       Padding(
