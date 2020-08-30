@@ -45,7 +45,10 @@ class _HomeState extends State<Home> {
             appBar: AppBar(
               title: AutoSizeText(
                 "Jack Scherlag",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.bold),
               ),
               backgroundColor: Colors.transparent,
             ),
@@ -62,11 +65,25 @@ class _HomeState extends State<Home> {
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
-                        child: Center(child: AutoSizeText("About Me")),
+                        child: Center(
+                          child: AutoSizeText(
+                            "About Me",
+                            style: TextStyle(
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
-                        child: Center(child: AutoSizeText("About This Site")),
+                        child: Center(
+                          child: AutoSizeText(
+                            "About This Site",
+                            style: TextStyle(
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
                       ),
                     ],
                   ),
