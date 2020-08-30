@@ -66,25 +66,51 @@ class _HomeState extends State<Home> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
                         child: Center(
-                          child: AutoSizeText(
-                            "About Me",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w600),
+                          child: GestureDetector(
+                            onTap: () {
+                              print("clicked");
+                            },
+                            child: AutoSizeText(
+                              "About Me",
+                              presetFontSizes: [20, 15, 13, 12, 11, 10, 9],
+                              maxLines: 1,
+                              style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w600),
+                            ),
                           ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Center(
-                          child: AutoSizeText(
-                            "About This Site",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w600),
+                          child: GestureDetector(
+                            onTap: () {
+                              print("clicked");
+                            },
+                            child: AutoSizeText(
+                              "About This Site",
+                              presetFontSizes: [20, 15, 13, 12, 11, 10, 9],
+                              maxLines: 2,
+                              style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w600),
+                            ),
                           ),
                         ),
                       ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height - 300,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          print("clicked");
+                        },
+                        child: Icon(
+                          Icons.web,
+                          size: 100,
+                        ),
+                      ) //replace with github icon
                     ],
                   ),
                 ),
