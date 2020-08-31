@@ -8,6 +8,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int buttonPushed = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +24,9 @@ class _HomeState extends State<Home> {
           Scaffold(
             drawerScrimColor: Colors.transparent,
             backgroundColor: Colors.transparent,
+            body: AboutMe(
+              buttonPushed: buttonPushed,
+            ),
             appBar: AppBar(
               title: AutoSizeText(
                 "Jack Scherlag",
@@ -48,10 +53,9 @@ class _HomeState extends State<Home> {
                         child: Center(
                           child: GestureDetector(
                             onTap: () {
-                              Hero(
-                                tag: "about",
-                                child: AboutMe(),
-                              );
+                              setState(() {
+                                buttonPushed = 1;
+                              });
                             },
                             child: AutoSizeText(
                               "About Me",
