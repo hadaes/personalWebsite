@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import "package:flutter/services.dart" show rootBundle;
+import 'package:personalWebsite/screens/aboutme.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -8,34 +8,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final int textAssetCount = 2;
-
-  List<String> texts = new List(2);
-
-  Future<List<String>> loadAsset() async {
-    List<String> assetTexts = new List(textAssetCount);
-    for (int i = 0; i < textAssetCount; i++) {
-      assetTexts[i] = await rootBundle.loadString("assets/text/info-$i.txt");
-    }
-    return assetTexts;
-  }
-
-  @override
-  void initState() {
-    loadAsset().then((value) {
-      setState(() {
-        texts = value;
-      });
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          Image(
+          FadeInImage(
               image: AssetImage("assets/images/heli.jpeg"),
+              placeholder: AssetImage("assets/images/primary.jpeg"),
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               fit: BoxFit.cover),
@@ -68,7 +48,10 @@ class _HomeState extends State<Home> {
                         child: Center(
                           child: GestureDetector(
                             onTap: () {
-                              print("clicked");
+                              Hero(
+                                tag: "about",
+                                child: AboutMe(),
+                              );
                             },
                             child: AutoSizeText(
                               "About Me",
