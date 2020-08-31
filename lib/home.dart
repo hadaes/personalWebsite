@@ -24,16 +24,21 @@ class _HomeState extends State<Home> {
           Scaffold(
             drawerScrimColor: Colors.transparent,
             backgroundColor: Colors.transparent,
-            body: AboutMe(
-              buttonPushed: buttonPushed,
-            ),
+            body: AboutMe(buttonPushed: buttonPushed),
             appBar: AppBar(
-              title: AutoSizeText(
-                "Jack Scherlag",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "Poppins",
-                    fontWeight: FontWeight.bold),
+              title: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    buttonPushed = 0;
+                  });
+                },
+                child: AutoSizeText(
+                  "Jack Scherlag",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.bold),
+                ),
               ),
               backgroundColor: Colors.transparent,
             ),
