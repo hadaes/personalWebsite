@@ -23,7 +23,9 @@ class _HomeState extends State<Home> {
               fit: BoxFit.cover),
           Scaffold(
             drawerScrimColor: Colors.transparent,
-            backgroundColor: Colors.transparent,
+            backgroundColor: buttonPushed == 0
+                ? Colors.transparent
+                : Colors.transparent.withOpacity(0.15),
             body: AboutMe(buttonPushed: buttonPushed),
             appBar: AppBar(
               title: GestureDetector(
