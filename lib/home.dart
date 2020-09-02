@@ -80,6 +80,7 @@ class _HomeState extends State<Home> {
                           child: GestureDetector(
                             onTap: () {
                               print("clicked");
+                              Navigator.pop(context);
                             },
                             child: AutoSizeText(
                               "About This Site",
