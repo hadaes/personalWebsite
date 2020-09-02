@@ -61,6 +61,7 @@ class _HomeState extends State<Home> {
                               setState(() {
                                 buttonPushed = 1;
                               });
+                              Navigator.pop(context);
                             },
                             child: AutoSizeText(
                               "About Me",
