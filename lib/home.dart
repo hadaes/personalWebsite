@@ -89,7 +89,6 @@ class _HomeState extends State<Home> {
                         child: Center(
                           child: FlatButton(
                             onPressed: () {
-                              print("clicked");
                               Navigator.pop(context);
                             },
                             child: AutoSizeText(
