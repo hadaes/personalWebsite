@@ -66,8 +66,8 @@ class _HomeState extends State<Home> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
                         child: Center(
-                          child: GestureDetector(
-                            onTap: () {
+                          child: FlatButton(
+                            onPressed: () {
                               setState(() {
                                 buttonPushed = 1;
                               });
@@ -87,8 +87,8 @@ class _HomeState extends State<Home> {
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Center(
-                          child: GestureDetector(
-                            onTap: () {
+                          child: FlatButton(
+                            onPressed: () {
                               print("clicked");
                               Navigator.pop(context);
                             },
