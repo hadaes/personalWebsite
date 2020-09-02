@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:personalWebsite/screens/aboutme.dart';
+import "package:url_launcher/url_launcher.dart";
 
 class Home extends StatefulWidget {
   @override
@@ -9,6 +10,15 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int buttonPushed = 0;
+
+  _launchURL() async {
+    const url = 'https://flutter.io';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +108,7 @@ class _HomeState extends State<Home> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          print("clicked");
+                          _launchURL();
                         },
                         child: Icon(
                           Icons.web,
