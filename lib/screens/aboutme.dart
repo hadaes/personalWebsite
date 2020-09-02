@@ -10,20 +10,10 @@ class AboutMe extends StatefulWidget {
 }
 
 class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation _animation;
-
-  @override
-  void initState() {
-    _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 8));
-    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
-  }
-
   // add layout builder
+
   @override
   Widget build(BuildContext context) {
-    _controller.forward();
     return AnimatedContainer(
       color: widget.buttonPushed == 0
           ? Colors.transparent
@@ -31,19 +21,27 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
       duration: Duration(seconds: 1),
       child: widget.buttonPushed == 0
           ? Container()
-          : Center(
-              child: FadeTransition(
-                opacity: _animation,
-                child: Text(
-                  "I am jack scherlag",
-                  style: TextStyle(
-                      fontSize: 30,
-                      color: widget.buttonPushed == 0
-                          ? Colors.transparent
-                          : Colors.white),
-                ),
-              ),
-            ),
+          : LayoutBuilder(builder: (context, constraints) {
+              if (constraints.maxWidth < 600) {
+                return Center(
+                  child: Text(
+                    "Hi",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                );
+              } else {
+                return Center(
+                  child: Text(
+                    "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
+                    style: TextStyle(
+                        fontSize: 30,
+                        color: widget.buttonPushed == 0
+                            ? Colors.transparent
+                            : Colors.white),
+                  ),
+                );
+              }
+            }),
     );
   }
 }
