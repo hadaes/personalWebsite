@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   int buttonPushed = 0;
 
   _launchURL() async {
-    const url = 'https://flutter.io';
+    const url = 'https://github.com/hadaes';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -109,6 +109,7 @@ class _HomeState extends State<Home> {
                       GestureDetector(
                         onTap: () {
                           _launchURL();
+                          Navigator.pop(context);
                         },
                         child: Icon(
                           Icons.web,
