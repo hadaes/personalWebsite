@@ -20,6 +20,8 @@ class _HomeState extends State<Home> {
     }
   }
 
+  var myGroup = AutoSizeGroup();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,8 +77,9 @@ class _HomeState extends State<Home> {
                             },
                             child: AutoSizeText(
                               "About Me",
-                              presetFontSizes: [20, 15, 13, 12, 11, 10, 9],
+                              presetFontSizes: [22, 20, 15, 13, 12, 11, 10, 9],
                               maxLines: 1,
+                              group: myGroup,
                               style: TextStyle(
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w600),
@@ -93,8 +96,9 @@ class _HomeState extends State<Home> {
                             },
                             child: AutoSizeText(
                               "About This Site",
-                              presetFontSizes: [20, 15, 13, 12, 11, 10, 9],
-                              maxLines: 2,
+                              presetFontSizes: [22, 20, 15, 13, 12, 11, 10, 9],
+                              maxLines: 1,
+                              group: myGroup,
                               style: TextStyle(
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w600),
