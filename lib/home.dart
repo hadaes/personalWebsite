@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:personalWebsite/screens/aboutme.dart';
 import "package:url_launcher/url_launcher.dart";
 
@@ -114,7 +115,7 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height - 350,
+                        height: MediaQuery.of(context).size.height - 325,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -122,18 +123,19 @@ class _HomeState extends State<Home> {
                           Navigator.pop(context);
                         },
                         child: Icon(
-                          Icons.web,
-                          size: 100,
+                          FontAwesome.github,
+                          size: 65,
                         ),
                       ),
                       Container(
                         color: Colors.transparent,
-                        child: Text(
+                        child: AutoSizeText(
                           "Copyright © 2020 Jack Scherlag",
+                          textAlign: TextAlign.center,
                           style: TextStyle(fontFamily: "Poppins"),
                         ),
                         alignment: Alignment.bottomCenter,
-                      ), //replace with github icon
+                      ),
                     ],
                   ),
                 ),
