@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height - 300,
+                        height: MediaQuery.of(context).size.height - 350,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -125,7 +125,15 @@ class _HomeState extends State<Home> {
                           Icons.web,
                           size: 100,
                         ),
-                      ) //replace with github icon
+                      ),
+                      Container(
+                        color: Colors.transparent,
+                        child: Text(
+                          "Copyright © 2020 Jack Scherlag",
+                          style: TextStyle(fontFamily: "Poppins"),
+                        ),
+                        alignment: Alignment.bottomCenter,
+                      ), //replace with github icon
                     ],
                   ),
                 ),
