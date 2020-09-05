@@ -2,6 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:personalWebsite/screens/aboutme.dart';
+import 'package:personalWebsite/screens/site.dart';
+import 'package:personalWebsite/widgets/body_controller.dart';
 import "package:url_launcher/url_launcher.dart";
 
 class Home extends StatefulWidget {
@@ -37,7 +39,7 @@ class _HomeState extends State<Home> {
           Scaffold(
             drawerScrimColor: Colors.transparent,
             backgroundColor: Colors.transparent,
-            body: AboutMe(buttonPushed: buttonPushed),
+            body: BodyController(buttonPushed),
             appBar: AppBar(
               title: GestureDetector(
                 onTap: () {
@@ -97,6 +99,9 @@ class _HomeState extends State<Home> {
                         child: Center(
                           child: FlatButton(
                             onPressed: () {
+                              setState(() {
+                                buttonPushed = 2;
+                              });
                               Navigator.pop(context);
                             },
                             child: AutoSizeText(
