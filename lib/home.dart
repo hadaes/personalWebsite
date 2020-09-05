@@ -1,8 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:personalWebsite/screens/aboutme.dart';
-import 'package:personalWebsite/screens/site.dart';
 import 'package:personalWebsite/widgets/body_controller.dart';
 import "package:url_launcher/url_launcher.dart";
 
@@ -82,9 +80,10 @@ class _HomeState extends State<Home> {
                             },
                             child: AutoSizeText(
                               "About Me",
-                              presetFontSizes: [22, 20, 15, 14, 13, 12],
-                              maxLines: 1,
+                              presetFontSizes: [22, 20, 15, 14],
+                              maxLines: 2,
                               group: myGroup,
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontWeight: FontWeight.w600,
@@ -106,7 +105,7 @@ class _HomeState extends State<Home> {
                             },
                             child: AutoSizeText(
                               "About This Site",
-                              presetFontSizes: [22, 20, 15, 14, 13, 12],
+                              presetFontSizes: [22, 20, 15, 14],
                               maxLines: 2,
                               group: myGroup,
                               textAlign: TextAlign.center,
