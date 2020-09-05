@@ -36,43 +36,41 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
       opacity: _animation,
       child: Container(
         color: Colors.transparent.withOpacity(0.3),
-        child: widget.buttonPushed == 0 && widget.buttonPushed != 1
-            ? Container()
-            : LayoutBuilder(
-                builder: (context, constraints) {
-                  if (constraints.maxWidth < 600) {
-                    return ListView(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                          child: Center(
-                            child: AutoSizeText(
-                              "This website was built with Flutter and is hosted on Firebase",
-                              style: TextStyle(
-                                  color: Colors.white, fontFamily: "Poppins"),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                      ],
-                    );
-                  } else {
-                    return Center(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            if (constraints.maxWidth < 600) {
+              return ListView(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+                    child: Center(
                       child: AutoSizeText(
                         "This website was built with Flutter and is hosted on Firebase",
                         style: TextStyle(
-                            fontSize: 30,
-                            fontFamily: "Poppins",
-                            color: widget.buttonPushed == 0 &&
-                                    widget.buttonPushed != 1
-                                ? Colors.transparent
-                                : Colors.white),
+                            color: Colors.white, fontFamily: "Poppins"),
                         textAlign: TextAlign.center,
                       ),
-                    );
-                  }
-                },
-              ),
+                    ),
+                  ),
+                ],
+              );
+            } else {
+              return Center(
+                child: AutoSizeText(
+                  "This website was built with Flutter and is hosted on Firebase",
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: "Poppins",
+                      color:
+                          widget.buttonPushed == 0 && widget.buttonPushed != 1
+                              ? Colors.transparent
+                              : Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+              );
+            }
+          },
+        ),
       ),
     );
   }
