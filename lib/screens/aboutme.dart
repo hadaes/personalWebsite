@@ -4,15 +4,13 @@ import "package:flutter/material.dart";
 class AboutMe extends StatefulWidget {
   final int buttonPushed;
 
-  AboutMe({this.buttonPushed});
+  AboutMe(this.buttonPushed);
 
   @override
   _AboutMeState createState() => _AboutMeState();
 }
 
 class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
-  // add layout builder
-
   AnimationController _controller;
   Animation _animation;
 
@@ -20,9 +18,9 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
   void initState() {
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 6, milliseconds: 500),
+      duration: Duration(seconds: 3),
     );
-    _animation = Tween(begin: 0.4, end: 1.0).animate(_controller);
+    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
     _controller.forward();
   }
 
@@ -34,23 +32,20 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      color: widget.buttonPushed == 0
-          ? Colors.transparent
-          : Colors.transparent.withOpacity(0.3),
-      duration: Duration(seconds: 1),
-      child: widget.buttonPushed == 0
-          ? Container()
-          : LayoutBuilder(
-              builder: (context, constraints) {
-                if (constraints.maxWidth < 600) {
-                  return ListView(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                        child: Center(
-                          child: FadeTransition(
-                            opacity: _animation,
+    return FadeTransition(
+      opacity: _animation,
+      child: Container(
+        color: Colors.transparent.withOpacity(0.3),
+        child: widget.buttonPushed == 0 && widget.buttonPushed != 2
+            ? Container()
+            : LayoutBuilder(
+                builder: (context, constraints) {
+                  if (constraints.maxWidth < 600) {
+                    return ListView(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+                          child: Center(
                             child: AutoSizeText(
                               "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
                               style: TextStyle(
@@ -59,28 +54,26 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  );
-                } else {
-                  return Center(
-                    child: FadeTransition(
-                      opacity: _animation,
+                      ],
+                    );
+                  } else {
+                    return Center(
                       child: AutoSizeText(
                         "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
                         style: TextStyle(
                             fontSize: 30,
                             fontFamily: "Poppins",
-                            color: widget.buttonPushed == 0
+                            color: widget.buttonPushed == 0 &&
+                                    widget.buttonPushed != 2
                                 ? Colors.transparent
                                 : Colors.white),
                         textAlign: TextAlign.center,
                       ),
-                    ),
-                  );
-                }
-              },
-            ),
+                    );
+                  }
+                },
+              ),
+      ),
     );
   }
 }
