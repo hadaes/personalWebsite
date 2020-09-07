@@ -16,6 +16,7 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
+    super.initState();
     _controller = AnimationController(
       vsync: this,
       duration: Duration(seconds: 3),
