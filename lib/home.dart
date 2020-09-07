@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
                       width: MediaQuery.of(context).size.width * 0.20,
                       child: Drawer(
                         elevation: 50,
-                        child: ListView(
+                        child: Column(
                           children: [
                             SizedBox(
                               height: 63, //approximate size of appbar
