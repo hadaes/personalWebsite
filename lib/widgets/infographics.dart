@@ -1,4 +1,4 @@
-import "package:flutter/cupertino.dart";
+import "package:flutter/material.dart";
 import "package:auto_size_text/auto_size_text.dart";
 
 class Infographics extends StatefulWidget {
@@ -12,7 +12,7 @@ class _InfographicsState extends State<Infographics> {
     return Stack(
       children: <Widget>[
         Container(
-          color: CupertinoColors.white,
+          color: Colors.transparent,
           height: MediaQuery.of(context).size.height * 0.9,
           width: MediaQuery.of(context).size.width * 0.5,
         ),
@@ -25,7 +25,7 @@ class _InfographicsState extends State<Infographics> {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.35,
                   decoration: BoxDecoration(
-                    color: CupertinoColors.black,
+                    color: Colors.black.withOpacity(0.8),
                     shape: BoxShape.circle,
                   ),
                   child: Center(
@@ -36,7 +36,7 @@ class _InfographicsState extends State<Infographics> {
                         ">600 Flight Hours",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: CupertinoColors.white,
+                          color: Colors.white,
                         ),
                         maxFontSize: 25.0,
                         presetFontSizes: [25.0, 20.0, 15.0, 10.0],
@@ -58,7 +58,7 @@ class _InfographicsState extends State<Infographics> {
                         "1 US Patent",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: CupertinoColors.white,
+                          color: Colors.white,
                         ),
                         maxFontSize: 25.0,
                         presetFontSizes: [25.0, 20.0, 15.0, 10.0],
@@ -67,7 +67,7 @@ class _InfographicsState extends State<Infographics> {
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: CupertinoColors.black,
+                    color: Colors.black.withOpacity(0.8),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -84,7 +84,7 @@ class _InfographicsState extends State<Infographics> {
                         "Multi-instrumentalist",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: CupertinoColors.white,
+                          color: Colors.white,
                         ),
                         maxFontSize: 25.0,
                         presetFontSizes: [25.0, 20.0, 15.0, 10.0],
@@ -93,7 +93,7 @@ class _InfographicsState extends State<Infographics> {
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: CupertinoColors.black,
+                    color: Colors.black.withOpacity(0.8),
                     shape: BoxShape.circle,
                   ),
                 ),
