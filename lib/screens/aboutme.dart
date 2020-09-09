@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
+import 'package:personalWebsite/widgets/infographics.dart';
 
 class AboutMe extends StatefulWidget {
   final int buttonPushed;
@@ -56,18 +57,21 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                 ],
               );
             } else {
-              return Center(
-                child: AutoSizeText(
-                  "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontFamily: "Poppins",
-                      color:
-                          widget.buttonPushed == 0 && widget.buttonPushed != 2
-                              ? Colors.transparent
-                              : Colors.white),
-                  textAlign: TextAlign.center,
-                ),
+              return ListView(
+                children: [
+                  AutoSizeText(
+                    "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontFamily: "Poppins",
+                        color:
+                            widget.buttonPushed == 0 && widget.buttonPushed != 2
+                                ? Colors.transparent
+                                : Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                  Infographics(),
+                ],
               );
             }
           },
