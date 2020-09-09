@@ -58,10 +58,11 @@ class _HomeState extends State<Home> {
               backgroundColor: Colors.transparent,
             ),
             drawer: Theme(
-              data: Theme.of(context).copyWith(canvasColor: Colors.white),
+              data: Theme.of(context).copyWith(canvasColor: Colors.black),
               child: LayoutBuilder(
                 builder: (context, constraints) {
-                  if (constraints.maxWidth > 600) {
+                  if (constraints.maxWidth > 600 &&
+                      constraints.maxHeight > 600) {
                     return Container(
                       width: MediaQuery.of(context).size.width * 0.20,
                       child: Drawer(
@@ -88,10 +89,10 @@ class _HomeState extends State<Home> {
                                     group: myGroup,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.1,
-                                    ),
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 1.1,
+                                        color: Colors.white),
                                   ),
                                 ),
                               ),
@@ -114,16 +115,16 @@ class _HomeState extends State<Home> {
                                     group: myGroup,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.1,
-                                    ),
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 1.1,
+                                        color: Colors.white),
                                   ),
                                 ),
                               ),
                             ),
                             SizedBox(
-                              height: MediaQuery.of(context).size.height - 325,
+                              height: MediaQuery.of(context).size.height - 375,
                             ),
                             GestureDetector(
                               onTap: () {
@@ -133,6 +134,7 @@ class _HomeState extends State<Home> {
                               child: Icon(
                                 FontAwesome.github,
                                 size: 65,
+                                color: Colors.white,
                               ),
                             ),
                             Container(
@@ -140,7 +142,10 @@ class _HomeState extends State<Home> {
                               child: AutoSizeText(
                                 "Copyright © 2020 Jack Scherlag",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontFamily: "Poppins"),
+                                presetFontSizes: [12, 10, 9, 8],
+                                maxLines: 2,
+                                style: TextStyle(
+                                    fontFamily: "Poppins", color: Colors.white),
                               ),
                               alignment: Alignment.bottomCenter,
                             ),
@@ -148,7 +153,8 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     );
-                  } else if (constraints.maxWidth <= 600) {
+                  } else if (constraints.maxWidth <= 600 ||
+                      constraints.maxHeight <= 600) {
                     return Container(
                       width: MediaQuery.of(context).size.width,
                       child: Drawer(
@@ -170,10 +176,10 @@ class _HomeState extends State<Home> {
                                   group: myGroup,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 1.1,
-                                  ),
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 1.1,
+                                      color: Colors.white),
                                 ),
                               ),
                             ),
@@ -192,10 +198,10 @@ class _HomeState extends State<Home> {
                                   group: myGroup,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 1.1,
-                                  ),
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 1.1,
+                                      color: Colors.white),
                                 ),
                               ),
                             ),
@@ -206,7 +212,8 @@ class _HomeState extends State<Home> {
                               },
                               child: Icon(
                                 FontAwesome.github,
-                                size: 40,
+                                size: 100,
+                                color: Colors.white,
                               ),
                             ),
                             Container(
@@ -214,7 +221,11 @@ class _HomeState extends State<Home> {
                               child: AutoSizeText(
                                 "Copyright © 2020 Jack Scherlag",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontFamily: "Poppins"),
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
+                                ),
                               ),
                               alignment: Alignment.bottomCenter,
                             ),
