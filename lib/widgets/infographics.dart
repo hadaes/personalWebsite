@@ -81,7 +81,7 @@ class _InfographicsState extends State<Infographics> {
                       height: MediaQuery.of(context).size.height * 0.09,
                       alignment: Alignment.center,
                       child: AutoSizeText(
-                        "Multi-instrumentalist",
+                        "1 Paper Coauthored",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
