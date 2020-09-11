@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
-import 'package:personalWebsite/widgets/infographics.dart';
+import 'package:personalWebsite/widgets/quick_facts.dart';
 
 class AboutMe extends StatefulWidget {
   final int buttonPushed;
@@ -40,7 +40,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
         color: Colors.transparent.withOpacity(0.3),
         child: LayoutBuilder(
           builder: (context, constraints) {
-            if (constraints.maxWidth < 600) {
+            if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
               return ListView(
                 children: [
                   Padding(
@@ -57,8 +57,11 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                 ],
               );
             } else {
-              return ListView(
+              return Column(
                 children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   AutoSizeText(
                     "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
                     style: TextStyle(
@@ -70,7 +73,10 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                                 : Colors.white),
                     textAlign: TextAlign.center,
                   ),
-                  Infographics(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.25,
+                  ),
+                  QuickFacts(),
                 ],
               );
             }
