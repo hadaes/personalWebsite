@@ -40,20 +40,17 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
         child: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
-              return ListView(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                    child: Center(
-                      child: AutoSizeText(
-                        "This website was built with Flutter and is hosted on Firebase",
-                        style: TextStyle(
-                            color: Colors.white, fontFamily: "Poppins"),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+                child: Center(
+                  child: AutoSizeText(
+                    "This website was built with Flutter and is hosted on Firebase",
+                    presetFontSizes: [25, 20, 15, 10],
+                    style:
+                        TextStyle(color: Colors.white, fontFamily: "Poppins"),
+                    textAlign: TextAlign.center,
                   ),
-                ],
+                ),
               );
             } else {
               return Center(
