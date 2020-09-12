@@ -39,7 +39,7 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
         color: Colors.transparent.withOpacity(0.3),
         child: LayoutBuilder(
           builder: (context, constraints) {
-            if (constraints.maxWidth <= 600) {
+            if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
               return ListView(
                 children: [
                   Padding(
