@@ -43,17 +43,17 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
             if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
               return ListView(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                    child: Center(
-                      child: AutoSizeText(
-                        "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
-                        style: TextStyle(
-                            color: Colors.white, fontFamily: "Poppins"),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                  SizedBox(
+                    height: 10,
                   ),
+                  AutoSizeText(
+                    "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
+                    presetFontSizes: [25, 20, 15, 10],
+                    style:
+                        TextStyle(color: Colors.white, fontFamily: "Poppins"),
+                    textAlign: TextAlign.center,
+                  ),
+                  QuickFacts(constraints),
                 ],
               );
             } else {
@@ -76,7 +76,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.25,
                   ),
-                  QuickFacts(),
+                  QuickFacts(constraints),
                 ],
               );
             }
