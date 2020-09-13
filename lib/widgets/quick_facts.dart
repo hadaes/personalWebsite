@@ -5,7 +5,7 @@ import "package:percent_indicator/percent_indicator.dart";
 class QuickFacts extends StatelessWidget {
   var factsGroup = AutoSizeGroup();
 
-  BoxConstraints cts;
+  final BoxConstraints cts;
 
   QuickFacts(this.cts);
 
@@ -21,7 +21,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.40,
+                radius: MediaQuery.of(context).size.width * 0.5,
                 center: AutoSizeText(
                   ">600 Flight Hours",
                   maxLines: 1,
@@ -30,7 +30,7 @@ class QuickFacts extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontFamily: "Poppins"),
                 ),
                 animation: true,
-                animationDuration: 1200,
+                animationDuration: 2000,
                 startAngle: 0.0,
                 percent: 1.0,
                 progressColor: Colors.black,
@@ -40,7 +40,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.40,
+                radius: MediaQuery.of(context).size.width * 0.5,
                 center: AutoSizeText(
                   "1 US Patent",
                   maxLines: 1,
@@ -49,7 +49,7 @@ class QuickFacts extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontFamily: "Poppins"),
                 ),
                 animation: true,
-                animationDuration: 1200,
+                animationDuration: 2000,
                 startAngle: 0.0,
                 percent: 1.0,
                 progressColor: Colors.black,
@@ -59,7 +59,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.40,
+                radius: MediaQuery.of(context).size.width * 0.5,
                 center: AutoSizeText(
                   "1 Paper Coauthored",
                   maxLines: 1,
@@ -68,7 +68,7 @@ class QuickFacts extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontFamily: "Poppins"),
                 ),
                 animation: true,
-                animationDuration: 1200,
+                animationDuration: 2000,
                 startAngle: 0.0,
                 percent: 1.0,
                 progressColor: Colors.black,
