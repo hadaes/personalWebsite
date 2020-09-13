@@ -21,7 +21,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.5,
+                radius: MediaQuery.of(context).size.width * 0.7,
                 center: AutoSizeText(
                   ">600 Flight Hours",
                   maxLines: 1,
@@ -40,7 +40,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.5,
+                radius: MediaQuery.of(context).size.width * 0.7,
                 center: AutoSizeText(
                   "1 US Patent",
                   maxLines: 1,
@@ -59,7 +59,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.5,
+                radius: MediaQuery.of(context).size.width * 0.7,
                 center: AutoSizeText(
                   "1 Paper Coauthored",
                   maxLines: 1,
