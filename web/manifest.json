@@ -1,11 +1,11 @@
 {
-    "name": "personalWebsite",
-    "short_name": "personalWebsite",
+    "name": "Jack Scherlag",
+    "short_name": "Jack Scherlag",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Jack Scherlag's Site",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
