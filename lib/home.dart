@@ -4,6 +4,8 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:personalWebsite/widgets/body_controller.dart';
 import "package:url_launcher/url_launcher.dart";
 
+// Set layout and navigation
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -26,6 +28,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Stack allows for background image to remain constant
       body: Stack(
         children: [
           FadeInImage(
@@ -63,6 +66,7 @@ class _HomeState extends State<Home> {
                 builder: (context, constraints) {
                   if (constraints.maxWidth <= 600 ||
                       constraints.maxHeight <= 600) {
+                    // mobile view
                     return Container(
                       width: MediaQuery.of(context).size.width,
                       child: Drawer(
@@ -142,6 +146,7 @@ class _HomeState extends State<Home> {
                       ),
                     );
                   } else {
+                    // desktop view
                     return Container(
                       width: MediaQuery.of(context).size.width * 0.20,
                       child: Drawer(

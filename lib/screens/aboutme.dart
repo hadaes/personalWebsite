@@ -2,6 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
 import 'package:personalWebsite/widgets/quick_facts.dart';
 
+// Body content for the about me screen
+
 class AboutMe extends StatefulWidget {
   final int buttonPushed;
 
@@ -41,6 +43,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
         child: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
+              // mobile view
               return ListView(
                 children: [
                   SizedBox(
@@ -58,6 +61,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
               );
             } else {
               return Column(
+                // desktop view
                 children: [
                   SizedBox(
                     height: 10,

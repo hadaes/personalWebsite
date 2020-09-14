@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
 
+// Body content for About This Site page
+
 class Site extends StatefulWidget {
   final int buttonPushed;
 
@@ -40,6 +42,7 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
         child: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
+              // mobile view
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
                 child: Center(
@@ -54,6 +57,7 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
               );
             } else {
               return Center(
+                // desktop view
                 child: AutoSizeText(
                   "This website was built with Flutter and is hosted on Firebase",
                   style: TextStyle(
