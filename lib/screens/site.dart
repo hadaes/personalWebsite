@@ -21,7 +21,7 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 3),
+      duration: Duration(seconds: 2),
     );
     _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
     _controller.forward();
@@ -42,7 +42,7 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
         child: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
-              // mobile view
+              // ---------------------- mobile view --------------------------
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
                 child: Center(
@@ -57,7 +57,7 @@ class _SiteState extends State<Site> with SingleTickerProviderStateMixin {
               );
             } else {
               return Center(
-                // desktop view
+                // ------------------------------ desktop view --------------------
                 child: AutoSizeText(
                   "This website was built with Flutter and is hosted on Firebase",
                   style: TextStyle(

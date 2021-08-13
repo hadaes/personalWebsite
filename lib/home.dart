@@ -107,6 +107,31 @@ class _HomeState extends State<Home> {
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
+                                    buttonPushed = 3;
+                                  });
+                                  Navigator.pop(context);
+                                },
+                                child: AutoSizeText(
+                                  "Projects",
+                                  presetFontSizes: [22, 20, 15, 14, 9, 5],
+                                  maxLines: 2,
+                                  group: myGroup,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 1.1,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.03,
+                            ),
+                            Center(
+                              child: TextButton(
+                                onPressed: () {
+                                  setState(() {
                                     buttonPushed = 2;
                                   });
                                   Navigator.pop(context);
@@ -126,7 +151,7 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                             SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.6,
+                              height: MediaQuery.of(context).size.height * 0.55,
                             ),
                             GestureDetector(
                               onTap: () {
@@ -179,6 +204,32 @@ class _HomeState extends State<Home> {
                                   },
                                   child: AutoSizeText(
                                     "About Me",
+                                    presetFontSizes: [22, 20, 15, 14],
+                                    maxLines: 2,
+                                    group: myGroup,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 1.1,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 20.0),
+                              child: Center(
+                                child: TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      buttonPushed = 3;
+                                    });
+                                    Navigator.pop(context);
+                                  },
+                                  child: AutoSizeText(
+                                    "Projects",
                                     presetFontSizes: [22, 20, 15, 14],
                                     maxLines: 2,
                                     group: myGroup,
