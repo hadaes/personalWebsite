@@ -59,6 +59,8 @@ class _HomeState extends State<Home> {
                 ),
               ),
               backgroundColor: Colors.transparent,
+              elevation: 0.5,
+              shadowColor: Colors.grey.withOpacity(0.10),
             ),
             drawer: Theme(
               data: Theme.of(context).copyWith(canvasColor: Colors.black),
@@ -66,15 +68,18 @@ class _HomeState extends State<Home> {
                 builder: (context, constraints) {
                   if (constraints.maxWidth <= 600 ||
                       constraints.maxHeight <= 600) {
-                    // mobile view
+                    // ----------- mobile view -----------------------------------
                     return Container(
                       width: MediaQuery.of(context).size.width,
                       child: Drawer(
                         elevation: 50,
                         child: Column(
                           children: [
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.1,
+                            ),
                             Center(
-                              child: FlatButton(
+                              child: TextButton(
                                 onPressed: () {
                                   setState(() {
                                     buttonPushed = 1;
@@ -95,8 +100,11 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.03,
+                            ),
                             Center(
-                              child: FlatButton(
+                              child: TextButton(
                                 onPressed: () {
                                   setState(() {
                                     buttonPushed = 2;
@@ -117,6 +125,9 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.6,
+                            ),
                             GestureDetector(
                               onTap: () {
                                 _launchURL();
@@ -124,7 +135,7 @@ class _HomeState extends State<Home> {
                               },
                               child: Icon(
                                 FontAwesome.github,
-                                size: 100,
+                                size: MediaQuery.of(context).size.height * 0.1,
                                 color: Colors.white,
                               ),
                             ),
@@ -146,7 +157,7 @@ class _HomeState extends State<Home> {
                       ),
                     );
                   } else {
-                    // desktop view
+                    //------------------ desktop view ------------------------------
                     return Container(
                       width: MediaQuery.of(context).size.width * 0.20,
                       child: Drawer(
@@ -159,7 +170,7 @@ class _HomeState extends State<Home> {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
                               child: Center(
-                                child: FlatButton(
+                                child: TextButton(
                                   onPressed: () {
                                     setState(() {
                                       buttonPushed = 1;
@@ -185,7 +196,7 @@ class _HomeState extends State<Home> {
                               padding:
                                   const EdgeInsets.symmetric(vertical: 20.0),
                               child: Center(
-                                child: FlatButton(
+                                child: TextButton(
                                   onPressed: () {
                                     setState(() {
                                       buttonPushed = 2;

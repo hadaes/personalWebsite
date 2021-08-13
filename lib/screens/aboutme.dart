@@ -50,7 +50,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                     height: 10,
                   ),
                   AutoSizeText(
-                    "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
+                    "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
                     presetFontSizes: [25, 20, 15, 10],
                     style:
                         TextStyle(color: Colors.white, fontFamily: "Poppins"),
@@ -67,7 +67,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                     height: 10,
                   ),
                   AutoSizeText(
-                    "Originating from Oklahoma City, I strive to further my knowledge in aviation and technology",
+                    "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
                     style: TextStyle(
                         fontSize: 30,
                         fontFamily: "Poppins",
