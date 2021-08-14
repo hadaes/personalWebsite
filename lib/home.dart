@@ -279,7 +279,7 @@ class _HomeState extends State<Home> {
                               },
                               child: Icon(
                                 FontAwesome.github,
-                                size: 65,
+                                size: MediaQuery.of(context).size.height * 0.03,
                                 color: Colors.white,
                               ),
                             ),

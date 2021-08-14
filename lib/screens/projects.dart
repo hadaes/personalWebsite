@@ -6,7 +6,10 @@ class Project extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("Hi"),
+        child: Text(
+          "Hi",
+          style: TextStyle(color: Colors.white, fontSize: 40),
+        ),
       ),
     );
   }
