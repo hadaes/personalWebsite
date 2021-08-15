@@ -229,7 +229,7 @@ class _HomeState extends State<Home> {
                                     Navigator.pop(context);
                                   },
                                   child: AutoSizeText(
-                                    "Projects",
+                                    "Projects/Experience",
                                     presetFontSizes: [22, 20, 15, 14],
                                     maxLines: 2,
                                     group: myGroup,
