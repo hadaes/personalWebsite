@@ -73,109 +73,118 @@ class _HomeState extends State<Home> {
                       width: MediaQuery.of(context).size.width,
                       child: Drawer(
                         elevation: 50,
-                        child: Column(
+                        child: ListView(
                           children: [
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.1,
-                            ),
-                            Center(
-                              child: TextButton(
-                                onPressed: () {
-                                  setState(() {
-                                    buttonPushed = 1;
-                                  });
-                                  Navigator.pop(context);
-                                },
-                                child: AutoSizeText(
-                                  "About Me",
-                                  presetFontSizes: [22, 20, 15, 14, 9, 5],
-                                  maxLines: 2,
-                                  group: myGroup,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
+                            Column(
+                              children: [
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.1,
+                                ),
+                                Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        buttonPushed = 1;
+                                      });
+                                      Navigator.pop(context);
+                                    },
+                                    child: AutoSizeText(
+                                      "About Me",
+                                      presetFontSizes: [22, 20, 15, 14, 9, 5],
+                                      maxLines: 2,
+                                      group: myGroup,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 1.1,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.03,
+                                ),
+                                Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        buttonPushed = 3;
+                                      });
+                                      Navigator.pop(context);
+                                    },
+                                    child: AutoSizeText(
+                                      "Projects",
+                                      presetFontSizes: [22, 20, 15, 14, 9, 5],
+                                      maxLines: 2,
+                                      group: myGroup,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 1.1,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.03,
+                                ),
+                                Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        buttonPushed = 2;
+                                      });
+                                      Navigator.pop(context);
+                                    },
+                                    child: AutoSizeText(
+                                      "About This Site",
+                                      presetFontSizes: [22, 20, 15, 14, 9, 5],
+                                      maxLines: 2,
+                                      group: myGroup,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 1.1,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.50,
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    _launchURL();
+                                    Navigator.pop(context);
+                                  },
+                                  child: Icon(
+                                    FontAwesome.github,
+                                    size: MediaQuery.of(context).size.height *
+                                        0.1,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  color: Colors.transparent,
+                                  child: AutoSizeText(
+                                    "Copyright © 2020 Jack Scherlag",
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
                                       fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.1,
-                                      color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  alignment: Alignment.bottomCenter,
                                 ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.03,
-                            ),
-                            Center(
-                              child: TextButton(
-                                onPressed: () {
-                                  setState(() {
-                                    buttonPushed = 3;
-                                  });
-                                  Navigator.pop(context);
-                                },
-                                child: AutoSizeText(
-                                  "Projects",
-                                  presetFontSizes: [22, 20, 15, 14, 9, 5],
-                                  maxLines: 2,
-                                  group: myGroup,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.1,
-                                      color: Colors.white),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.03,
-                            ),
-                            Center(
-                              child: TextButton(
-                                onPressed: () {
-                                  setState(() {
-                                    buttonPushed = 2;
-                                  });
-                                  Navigator.pop(context);
-                                },
-                                child: AutoSizeText(
-                                  "About This Site",
-                                  presetFontSizes: [22, 20, 15, 14, 9, 5],
-                                  maxLines: 2,
-                                  group: myGroup,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.1,
-                                      color: Colors.white),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.55,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                _launchURL();
-                                Navigator.pop(context);
-                              },
-                              child: Icon(
-                                FontAwesome.github,
-                                size: MediaQuery.of(context).size.height * 0.1,
-                                color: Colors.white,
-                              ),
-                            ),
-                            Container(
-                              color: Colors.transparent,
-                              child: AutoSizeText(
-                                "Copyright © 2020 Jack Scherlag",
-                                textAlign: TextAlign.center,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  color: Colors.white,
-                                ),
-                              ),
-                              alignment: Alignment.bottomCenter,
+                              ],
                             ),
                           ],
                         ),
@@ -185,115 +194,124 @@ class _HomeState extends State<Home> {
                     //------------------ desktop view ------------------------------
                     return Container(
                       width: MediaQuery.of(context).size.width * 0.20,
+                      height: MediaQuery.of(context).size.height,
                       child: Drawer(
                         elevation: 50,
-                        child: Column(
+                        child: ListView(
                           children: [
-                            SizedBox(
-                              height: 63, //approximate size of appbar
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
-                              child: Center(
-                                child: TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      buttonPushed = 1;
-                                    });
-                                    Navigator.pop(context);
-                                  },
-                                  child: AutoSizeText(
-                                    "About Me",
-                                    presetFontSizes: [22, 20, 15, 14],
-                                    maxLines: 2,
-                                    group: myGroup,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontFamily: "Poppins",
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 1.1,
-                                        color: Colors.white),
+                            Column(
+                              children: [
+                                SizedBox(
+                                  height: 63, //approximate size of appbar
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 5, 0, 10),
+                                  child: Center(
+                                    child: TextButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          buttonPushed = 1;
+                                        });
+                                        Navigator.pop(context);
+                                      },
+                                      child: AutoSizeText(
+                                        "About Me",
+                                        presetFontSizes: [22, 20, 15, 14],
+                                        maxLines: 2,
+                                        group: myGroup,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w600,
+                                            letterSpacing: 1.1,
+                                            color: Colors.white),
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 20.0),
-                              child: Center(
-                                child: TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      buttonPushed = 3;
-                                    });
-                                    Navigator.pop(context);
-                                  },
-                                  child: AutoSizeText(
-                                    "Projects/Experience",
-                                    presetFontSizes: [22, 20, 15, 14],
-                                    maxLines: 2,
-                                    group: myGroup,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontFamily: "Poppins",
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 1.1,
-                                        color: Colors.white),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Center(
+                                    child: TextButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          buttonPushed = 3;
+                                        });
+                                        Navigator.pop(context);
+                                      },
+                                      child: AutoSizeText(
+                                        "Projects/Experience",
+                                        presetFontSizes: [22, 20, 15, 14],
+                                        maxLines: 2,
+                                        group: myGroup,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w600,
+                                            letterSpacing: 1.1,
+                                            color: Colors.white),
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 20.0),
-                              child: Center(
-                                child: TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      buttonPushed = 2;
-                                    });
-                                    Navigator.pop(context);
-                                  },
-                                  child: AutoSizeText(
-                                    "About This Site",
-                                    presetFontSizes: [22, 20, 15, 14],
-                                    maxLines: 2,
-                                    group: myGroup,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontFamily: "Poppins",
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 1.1,
-                                        color: Colors.white),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20.0),
+                                  child: Center(
+                                    child: TextButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          buttonPushed = 2;
+                                        });
+                                        Navigator.pop(context);
+                                      },
+                                      child: AutoSizeText(
+                                        "About This Site",
+                                        presetFontSizes: [22, 20, 15, 14],
+                                        maxLines: 2,
+                                        group: myGroup,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w600,
+                                            letterSpacing: 1.1,
+                                            color: Colors.white),
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height - 375,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                _launchURL();
-                                Navigator.pop(context);
-                              },
-                              child: Icon(
-                                FontAwesome.github,
-                                size: MediaQuery.of(context).size.height * 0.03,
-                                color: Colors.white,
-                              ),
-                            ),
-                            Container(
-                              color: Colors.transparent,
-                              child: AutoSizeText(
-                                "Copyright © 2020 Jack Scherlag",
-                                textAlign: TextAlign.center,
-                                presetFontSizes: [12, 10, 9, 8],
-                                maxLines: 2,
-                                style: TextStyle(
-                                    fontFamily: "Poppins", color: Colors.white),
-                              ),
-                              alignment: Alignment.bottomCenter,
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    _launchURL();
+                                    Navigator.pop(context);
+                                  },
+                                  child: Icon(
+                                    FontAwesome.github,
+                                    size: MediaQuery.of(context).size.height *
+                                        0.03,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  color: Colors.transparent,
+                                  child: AutoSizeText(
+                                    "Copyright © 2020 Jack Scherlag",
+                                    textAlign: TextAlign.center,
+                                    presetFontSizes: [12, 10, 9, 8],
+                                    maxLines: 2,
+                                    style: TextStyle(
+                                        fontFamily: "Poppins",
+                                        color: Colors.white),
+                                  ),
+                                  alignment: Alignment.bottomCenter,
+                                ),
+                              ],
                             ),
                           ],
                         ),
