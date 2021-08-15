@@ -18,7 +18,7 @@ class BodyController extends StatelessWidget {
       case 2:
         return Site(buttonPushed);
       case 3:
-        return Project();
+        return Project(buttonPushed);
       default:
         return Container();
     }
