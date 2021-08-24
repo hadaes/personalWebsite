@@ -70,8 +70,11 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                           image: AssetImage("assets/images/jack_plane3.jpeg")),
                     ],
                     options: CarouselOptions(
-                      height: MediaQuery.of(context).size.width,
-                    ),
+                        // height: MediaQuery.of(context).size.height * 0.35, // leave out for now to keep photos same size
+                        ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.25,
                   ),
                 ],
               );
