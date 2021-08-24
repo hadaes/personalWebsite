@@ -3,7 +3,7 @@ import "package:flutter/material.dart";
 import 'package:personalWebsite/widgets/quick_facts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-// Body content for the about me screen
+// Body content for the About Me screen
 
 class AboutMe extends StatefulWidget {
   final int buttonPushed;

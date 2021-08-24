@@ -202,89 +202,86 @@ class _HomeState extends State<Home> {
                             Column(
                               children: [
                                 SizedBox(
-                                  height: 63, //approximate size of appbar
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.05,
                                 ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 5, 0, 10),
-                                  child: Center(
-                                    child: TextButton(
-                                      onPressed: () {
-                                        setState(() {
-                                          buttonPushed = 1;
-                                        });
-                                        Navigator.pop(context);
-                                      },
-                                      child: AutoSizeText(
-                                        "About Me",
-                                        presetFontSizes: [22, 20, 15, 14],
-                                        maxLines: 2,
-                                        group: myGroup,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontFamily: "Poppins",
-                                            fontWeight: FontWeight.w600,
-                                            letterSpacing: 1.1,
-                                            color: Colors.white),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 20.0),
-                                  child: Center(
-                                    child: TextButton(
-                                      onPressed: () {
-                                        setState(() {
-                                          buttonPushed = 3;
-                                        });
-                                        Navigator.pop(context);
-                                      },
-                                      child: AutoSizeText(
-                                        "Projects/Experience",
-                                        presetFontSizes: [22, 20, 15, 14],
-                                        maxLines: 2,
-                                        group: myGroup,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontFamily: "Poppins",
-                                            fontWeight: FontWeight.w600,
-                                            letterSpacing: 1.1,
-                                            color: Colors.white),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 20.0),
-                                  child: Center(
-                                    child: TextButton(
-                                      onPressed: () {
-                                        setState(() {
-                                          buttonPushed = 2;
-                                        });
-                                        Navigator.pop(context);
-                                      },
-                                      child: AutoSizeText(
-                                        "About This Site",
-                                        presetFontSizes: [22, 20, 15, 14],
-                                        maxLines: 2,
-                                        group: myGroup,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontFamily: "Poppins",
-                                            fontWeight: FontWeight.w600,
-                                            letterSpacing: 1.1,
-                                            color: Colors.white),
-                                      ),
+                                Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        buttonPushed = 1;
+                                      });
+                                      Navigator.pop(context);
+                                    },
+                                    child: AutoSizeText(
+                                      "About Me",
+                                      presetFontSizes: [22, 20, 15, 14],
+                                      maxLines: 2,
+                                      group: myGroup,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 1.1,
+                                          color: Colors.white),
                                     ),
                                   ),
                                 ),
                                 SizedBox(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.02,
+                                ),
+                                Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        buttonPushed = 3;
+                                      });
+                                      Navigator.pop(context);
+                                    },
+                                    child: AutoSizeText(
+                                      "Projects/Experience",
+                                      presetFontSizes: [22, 20, 15, 14],
+                                      maxLines: 2,
+                                      group: myGroup,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 1.1,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: MediaQuery.of(context).size.height *
+                                      0.025,
+                                ),
+                                Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        buttonPushed = 2;
+                                      });
+                                      Navigator.pop(context);
+                                    },
+                                    child: AutoSizeText(
+                                      "About This Site",
+                                      presetFontSizes: [22, 20, 15, 14],
+                                      maxLines: 2,
+                                      group: myGroup,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 1.1,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.7,
                                 ),
                                 GestureDetector(
                                   onTap: () {
@@ -294,7 +291,7 @@ class _HomeState extends State<Home> {
                                   child: Icon(
                                     FontAwesome.github,
                                     size: MediaQuery.of(context).size.height *
-                                        0.03,
+                                        0.05,
                                     color: Colors.white,
                                   ),
                                 ),
