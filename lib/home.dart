@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
                               children: [
                                 SizedBox(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.1,
+                                      MediaQuery.of(context).size.height * 0.05,
                                 ),
                                 Center(
                                   child: TextButton(
@@ -116,7 +116,7 @@ class _HomeState extends State<Home> {
                                       Navigator.pop(context);
                                     },
                                     child: AutoSizeText(
-                                      "Projects",
+                                      "Projects/Experience",
                                       presetFontSizes: [22, 20, 15, 14, 9, 5],
                                       maxLines: 2,
                                       group: myGroup,
@@ -157,7 +157,7 @@ class _HomeState extends State<Home> {
                                 ),
                                 SizedBox(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.50,
+                                      MediaQuery.of(context).size.height * 0.60,
                                 ),
                                 GestureDetector(
                                   onTap: () {
