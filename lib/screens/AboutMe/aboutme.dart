@@ -1,7 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
-import 'package:personalWebsite/widgets/quick_facts.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:personalWebsite/screens/AboutMe/desktop.dart';
+import 'package:personalWebsite/screens/AboutMe/mobile.dart';
 
 // Body content for the About Me screen
 
@@ -44,86 +43,9 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
         child: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
-              // ------------------------------- mobile view -------------------
-              return ListView(
-                children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  const AutoSizeText(
-                    "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
-                    presetFontSizes: [25, 20, 15, 10],
-                    style:
-                        TextStyle(color: Colors.white, fontFamily: "Poppins"),
-                    textAlign: TextAlign.center,
-                  ),
-                  QuickFacts(constraints),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.05,
-                  ),
-                  CarouselSlider(
-                    items: [
-                      const Image(
-                          image: AssetImage("assets/images/jack_plane.jpeg")),
-                      const Image(
-                          image: AssetImage("assets/images/jack_plane2.jpeg")),
-                      const Image(
-                          image: AssetImage("assets/images/jack_plane3.jpeg")),
-                    ],
-                    options: CarouselOptions(
-                        // height: MediaQuery.of(context).size.height * 0.35, // leave out for now to keep photos same size
-                        ),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.25,
-                  ),
-                ],
-              );
+              return AboutMeMobile(constraints);
             } else {
-              return ListView(children: [
-                Column(
-                  // ------------------------ desktop view --------------------
-                  children: [
-                    SizedBox(
-                      height: 10,
-                    ),
-                    const AutoSizeText(
-                      "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: "Poppins",
-                        color: Colors.white,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.15,
-                    ),
-                    QuickFacts(constraints),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.15,
-                    ),
-                    CarouselSlider(
-                      items: [
-                        const Image(
-                            image: AssetImage("assets/images/jack_plane.jpeg")),
-                        const Image(
-                            image:
-                                AssetImage("assets/images/jack_plane2.jpeg")),
-                        const Image(
-                            image:
-                                AssetImage("assets/images/jack_plane3.jpeg")),
-                      ],
-                      options: CarouselOptions(
-                        autoPlay: true,
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.05,
-                )
-              ]);
+              return AboutMeDesktop(constraints);
             }
           },
         ),
