@@ -50,7 +50,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                   SizedBox(
                     height: 10,
                   ),
-                  AutoSizeText(
+                  const AutoSizeText(
                     "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
                     presetFontSizes: [25, 20, 15, 10],
                     style:
@@ -63,10 +63,11 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                   ),
                   CarouselSlider(
                     items: [
-                      Image(image: AssetImage("assets/images/jack_plane.jpeg")),
-                      Image(
+                      const Image(
+                          image: AssetImage("assets/images/jack_plane.jpeg")),
+                      const Image(
                           image: AssetImage("assets/images/jack_plane2.jpeg")),
-                      Image(
+                      const Image(
                           image: AssetImage("assets/images/jack_plane3.jpeg")),
                     ],
                     options: CarouselOptions(
@@ -86,7 +87,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                     SizedBox(
                       height: 10,
                     ),
-                    AutoSizeText(
+                    const AutoSizeText(
                       "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
                       style: TextStyle(
                         fontSize: 30,
@@ -96,7 +97,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.25,
+                      height: MediaQuery.of(context).size.height * 0.15,
                     ),
                     QuickFacts(constraints),
                     SizedBox(
@@ -104,17 +105,16 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
                     ),
                     CarouselSlider(
                       items: [
-                        Image(
+                        const Image(
                             image: AssetImage("assets/images/jack_plane.jpeg")),
-                        Image(
+                        const Image(
                             image:
                                 AssetImage("assets/images/jack_plane2.jpeg")),
-                        Image(
+                        const Image(
                             image:
                                 AssetImage("assets/images/jack_plane3.jpeg")),
                       ],
                       options: CarouselOptions(
-                        height: MediaQuery.of(context).size.height,
                         autoPlay: true,
                       ),
                     )

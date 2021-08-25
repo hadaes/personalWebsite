@@ -16,6 +16,9 @@ class Project extends StatefulWidget {
 class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation _animation;
+  var titleGroupMobile = AutoSizeGroup();
+  var titleGroupDesktop = AutoSizeGroup();
+  var descriptionDesktop = AutoSizeGroup();
 
   @override
   void initState() {
@@ -44,17 +47,105 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
           builder: (context, constraints) {
             if (constraints.maxWidth <= 600 || constraints.maxHeight <= 600) {
               // ---------------------- mobile view --------------------------
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                child: Center(
-                  child: AutoSizeText(
-                    "This website was built with Flutter and is hosted on Firebase",
-                    presetFontSizes: [25, 20, 15, 10],
-                    style:
-                        TextStyle(color: Colors.white, fontFamily: "Poppins"),
-                    textAlign: TextAlign.center,
+              return ListView(
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.05,
                   ),
-                ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.1,
+                    child: AutoSizeText(
+                      "Summer 2021\nNCAR EOL Internship",
+                      group: titleGroupMobile,
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                    ),
+                  ),
+                  Center(
+                    child: Image(
+                      image: AssetImage("assets/images/NCAR_poster.png"),
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    child: InkWell(
+                      onTap: () => launch(
+                          "https://docs.google.com/file/d/1TDqsdvy7UHorm1uGunyxBrsKmqOhIKET/edit?usp=docslist_api&filetype=mspresentation"),
+                      child: AutoSizeText(
+                        "Full Poster",
+                        presetFontSizes: [15, 12],
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                            decoration: TextDecoration.underline),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                  Container(
+                    child: AutoSizeText(
+                      "While working with the Integrated Surface Flux Systems (ISFS) team, I developed a software library for a TI ADC and analyzed readings for determining stability and temperature dependence. My efforts on the group's circuit board for converting analog sensor information to a digital format led to the replacement of the old board",
+                      overflow: TextOverflow.clip,
+                      style: TextStyle(
+                        fontFamily: "Poppins",
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                  ),
+                  Center(
+                    child: AutoSizeText(
+                      "Spring 2021\nAutonomous Systems Lab",
+                      group: titleGroupMobile,
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontFamily: "Poppins",
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                  Center(
+                    child: Image(
+                      image: AssetImage("assets/images/robot.jpeg"),
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: AutoSizeText(
+                      "Over the course of a semester, I worked on developing autonomous hardware and software for a RC car. Stage 1 - Speed Control: Accomplished using Hall effect sensor and PID controller. Stage 2 - Track Navigation: Car centered on line using voltage levels from analog video. Stage 3 - Dynamic Navigation: PixyCam provided object detection and custom H-bridge allowed for reverse movement.",
+                      overflow: TextOverflow.clip,
+                      style: TextStyle(
+                        fontFamily: "Poppins",
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.10,
+                  ),
+                ],
               );
             } else {
               // ------------------------------ desktop view --------------------
@@ -66,10 +157,12 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                   Center(
                     child: AutoSizeText(
                       "Summer 2021\nNCAR Earth Observing Laboratory Internship",
+                      group: titleGroupDesktop,
                       style: TextStyle(
                         fontSize: 30,
                         fontFamily: "Poppins",
                         color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -90,12 +183,12 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                         width: MediaQuery.of(context).size.width * 0.4,
                         child: AutoSizeText(
                           "While working with the Integrated Surface Flux Systems (ISFS) team, I developed a software library for a TI ADC and analyzed readings for determining stability and temperature dependence. My efforts on the group's circuit board for converting analog sensor information to a digital format led to the replacement of the old board",
-                          presetFontSizes: [30, 25, 20, 15, 12],
-                          maxLines: 8,
+                          group: descriptionDesktop,
                           overflow: TextOverflow.clip,
                           style: TextStyle(
                             fontFamily: "Poppins",
                             color: Colors.white,
+                            fontSize: 25,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -122,15 +215,17 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.10,
+                    height: MediaQuery.of(context).size.height * 0.05,
                   ),
                   Center(
                     child: AutoSizeText(
                       "Spring 2021\nRobotics and Autonomous Systems Lab",
+                      group: titleGroupDesktop,
                       style: TextStyle(
                         fontSize: 30,
                         fontFamily: "Poppins",
                         color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -151,12 +246,12 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                         width: MediaQuery.of(context).size.width * 0.4,
                         child: AutoSizeText(
                           "Over the course of a semester, I worked on developing autonomous hardware and software for a RC car\nStage 1 - Speed Control: Accomplished using Hall effect sensor and PID controller \nStage 2 - Track Navigation: Car centered on line using voltage levels from analog video \nStage 3 - Dynamic Navigation: PixyCam provided object detection and custom H-bridge allowed for reverse movement ",
-                          presetFontSizes: [30, 28, 25, 20, 18, 15, 12],
-                          maxLines: 8,
+                          group: descriptionDesktop,
                           overflow: TextOverflow.clip,
                           style: TextStyle(
                             fontFamily: "Poppins",
                             color: Colors.white,
+                            fontSize: 25,
                           ),
                           textAlign: TextAlign.left,
                         ),

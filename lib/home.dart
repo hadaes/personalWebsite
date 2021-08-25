@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                     buttonPushed = 0;
                   });
                 },
-                child: AutoSizeText(
+                child: const AutoSizeText(
                   "Jack Scherlag",
                   presetFontSizes: [22, 20, 18, 15],
                   style: TextStyle(
