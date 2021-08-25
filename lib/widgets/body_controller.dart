@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
-import 'package:personalWebsite/screens/aboutme.dart';
-import 'package:personalWebsite/screens/site.dart';
-import 'package:personalWebsite/screens/projects.dart';
+import 'package:personalWebsite/screens/AboutMe/aboutme.dart';
+import 'package:personalWebsite/screens/Site/site.dart';
+import 'package:personalWebsite/screens/Projects/projects.dart';
 
 // Controls body content based on buttonPushed input
 
