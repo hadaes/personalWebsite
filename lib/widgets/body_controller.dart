@@ -22,15 +22,5 @@ class BodyController extends StatelessWidget {
       default:
         return Container();
     }
-    // if (buttonPushed == 0) {
-    //   return Container();
-    // } else if (buttonPushed == 1) {
-    //   return AboutMe(buttonPushed);
-    // } else if (buttonPushed == 2){
-    //   return Site(buttonPushed);
-    // }
-    // else {
-    //   return Site(buttonPushed);
-    // }
   }
 }
