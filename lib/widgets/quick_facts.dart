@@ -23,7 +23,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.7,
+                radius: MediaQuery.of(context).size.width * 0.35,
                 center: InkWell(
                   child: AutoSizeText(
                     ">650 Flight Hours",
@@ -47,7 +47,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.7,
+                radius: MediaQuery.of(context).size.width * 0.35,
                 center: InkWell(
                   child: AutoSizeText(
                     "1 US Patent",
@@ -71,7 +71,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.7,
+                radius: MediaQuery.of(context).size.width * 0.35,
                 center: InkWell(
                   child: AutoSizeText(
                     "1 Paper Coauthored",
@@ -102,7 +102,7 @@ class QuickFacts extends StatelessWidget {
             children: [
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.25,
+                radius: MediaQuery.of(context).size.width * 0.12,
                 center: InkWell(
                   child: AutoSizeText(
                     ">650 Flight Hours",
@@ -123,7 +123,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.25,
+                radius: MediaQuery.of(context).size.width * 0.12,
                 center: InkWell(
                   child: AutoSizeText(
                     "1 US Patent",
@@ -144,7 +144,7 @@ class QuickFacts extends StatelessWidget {
               ),
               CircularPercentIndicator(
                 backgroundColor: Colors.transparent,
-                radius: MediaQuery.of(context).size.width * 0.25,
+                radius: MediaQuery.of(context).size.width * 0.12,
                 center: InkWell(
                   child: AutoSizeText(
                     "1 Paper Coauthored",
