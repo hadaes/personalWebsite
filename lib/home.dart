@@ -28,6 +28,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //  <meta name="theme-color" content="#000000"> put this in index.html
       // Stack allows for background image to remain constant
       body: Stack(
         children: [
