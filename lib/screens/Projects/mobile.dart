@@ -54,6 +54,8 @@ class ProjectsMobile extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.02,
         ),
         Container(
+          width: MediaQuery.of(context).size.width * 0.4,
+          margin: EdgeInsets.all(8.0),
           child: AutoSizeText(
             "While working with the Integrated Surface Flux Systems (ISFS) team, I developed a software library for a TI ADC and analyzed readings for determining stability and temperature dependence. My efforts on the group's circuit board for converting analog sensor information to a digital format led to the replacement of the old board",
             overflow: TextOverflow.clip,
@@ -92,8 +94,9 @@ class ProjectsMobile extends StatelessWidget {
         ),
         Container(
           width: MediaQuery.of(context).size.width * 0.4,
+          margin: EdgeInsets.all(8.0),
           child: AutoSizeText(
-            "Over the course of a semester, I worked on developing autonomous hardware and software for a RC car. Stage 1 - Speed Control: Accomplished using Hall effect sensor and PID controller. Stage 2 - Track Navigation: Car centered on line using voltage levels from analog video. Stage 3 - Dynamic Navigation: PixyCam provided object detection and custom H-bridge allowed for reverse movement.",
+            "Over the course of a semester, I worked on developing autonomous hardware and software for a RC car.\n Stage 1 - Speed Control: Accomplished using Hall effect sensor and PID controller.\n Stage 2 - Track Navigation: Car centered on line using voltage levels from analog video.\n Stage 3 - Dynamic Navigation: PixyCam provided object detection and custom H-bridge allowed for reverse movement.",
             overflow: TextOverflow.clip,
             style: TextStyle(
               fontFamily: "Poppins",
