@@ -2,13 +2,20 @@ import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
 import 'package:url_launcher/url_launcher.dart';
 
-class ProjectsDesktop extends StatelessWidget {
+class ProjectsDesktop extends StatefulWidget {
+  @override
+  _ProjectsDesktopState createState() => _ProjectsDesktopState();
+}
+
+class _ProjectsDesktopState extends State<ProjectsDesktop> {
   var titleGroupDesktop = AutoSizeGroup();
+
   var descriptionDesktop = AutoSizeGroup();
 
   @override
   Widget build(BuildContext context) {
     return ListView(
+      cacheExtent: 2000,
       children: [
         SizedBox(
           height: 50,

@@ -13,6 +13,7 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      cacheExtent: 1000,
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
