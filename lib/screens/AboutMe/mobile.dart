@@ -30,6 +30,7 @@ class AboutMeMobile extends StatelessWidget {
             const Image(image: AssetImage("assets/images/jack_plane.jpeg")),
             const Image(image: AssetImage("assets/images/jack_plane2.jpeg")),
             const Image(image: AssetImage("assets/images/jack_plane3.jpeg")),
+            const Image(image: AssetImage("assets/images/jack_middle.JPG")),
           ],
           options: CarouselOptions(
               // height: MediaQuery.of(context).size.height * 0.35, // leave out for now to keep photos same size

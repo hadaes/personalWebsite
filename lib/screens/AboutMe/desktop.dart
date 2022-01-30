@@ -37,6 +37,8 @@ class AboutMeDesktop extends StatelessWidget {
               const Image(image: AssetImage("assets/images/jack_plane.jpeg")),
               const Image(image: AssetImage("assets/images/jack_plane2.jpeg")),
               const Image(image: AssetImage("assets/images/jack_plane3.jpeg")),
+              const Image(image: AssetImage("assets/images/jack_plane3.jpeg")),
+              const Image(image: AssetImage("assets/images/jack_middle.JPG")),
             ],
             options: CarouselOptions(
               autoPlay: true,
