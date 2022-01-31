@@ -106,88 +106,97 @@ class _QuickFactsState extends State<QuickFacts> {
           );
         } else {
           // --------------- desktop view -------------------------------------
-          return Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Expanded(
-                child: CircularPercentIndicator(
-                  backgroundColor: Colors.transparent,
-                  radius: MediaQuery.of(context).size.width * 0.15,
-                  center: InkWell(
-                    child: AutoSizeText(
-                      ">650 Flight Hours",
-                      stepGranularity: 5.0,
-                      minFontSize: 5,
-                      maxLines: 1,
-                      group: factsGroup,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: "Poppins",
-                          fontSize: 25),
+          return Container(
+            height: MediaQuery.of(context).size.width * 0.50,
+            child: Row(
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Flexible(
+                  flex: 1,
+                  fit: FlexFit.tight,
+                  child: CircularPercentIndicator(
+                    backgroundColor: Colors.transparent,
+                    radius: MediaQuery.of(context).size.width * 0.15,
+                    center: InkWell(
+                      child: AutoSizeText(
+                        ">650 Flight Hours",
+                        stepGranularity: 5.0,
+                        minFontSize: 5,
+                        maxLines: 1,
+                        group: factsGroup,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                            fontSize: 25),
+                      ),
+                      onTap: () =>
+                          launch('https://www.youtube.com/watch?v=1HWufbhWjMI'),
                     ),
-                    onTap: () =>
-                        launch('https://www.youtube.com/watch?v=1HWufbhWjMI'),
+                    animation: true,
+                    animationDuration: 1200,
+                    startAngle: 0.0,
+                    percent: 1.0,
+                    progressColor: Colors.black,
                   ),
-                  animation: true,
-                  animationDuration: 1200,
-                  startAngle: 0.0,
-                  percent: 1.0,
-                  progressColor: Colors.black,
                 ),
-              ),
-              Expanded(
-                child: CircularPercentIndicator(
-                  backgroundColor: Colors.transparent,
-                  radius: MediaQuery.of(context).size.width * 0.15,
-                  center: InkWell(
-                    child: AutoSizeText(
-                      "1 US Patent",
-                      stepGranularity: 5.0,
-                      minFontSize: 5,
-                      maxLines: 1,
-                      group: factsGroup,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: "Poppins",
-                          fontSize: 25),
+                Flexible(
+                  flex: 1,
+                  fit: FlexFit.tight,
+                  child: CircularPercentIndicator(
+                    backgroundColor: Colors.transparent,
+                    radius: MediaQuery.of(context).size.width * 0.15,
+                    center: InkWell(
+                      child: AutoSizeText(
+                        "1 US Patent",
+                        stepGranularity: 5.0,
+                        minFontSize: 5,
+                        maxLines: 1,
+                        group: factsGroup,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                            fontSize: 25),
+                      ),
+                      onTap: () => launch(
+                          'https://patents.google.com/patent/US10488064B1/en'),
                     ),
-                    onTap: () => launch(
-                        'https://patents.google.com/patent/US10488064B1/en'),
+                    animation: true,
+                    animationDuration: 1200,
+                    startAngle: 0.0,
+                    percent: 1.0,
+                    progressColor: Colors.black,
                   ),
-                  animation: true,
-                  animationDuration: 1200,
-                  startAngle: 0.0,
-                  percent: 1.0,
-                  progressColor: Colors.black,
                 ),
-              ),
-              Expanded(
-                child: CircularPercentIndicator(
-                  backgroundColor: Colors.transparent,
-                  radius: MediaQuery.of(context).size.width * 0.15,
-                  center: InkWell(
-                    child: AutoSizeText(
-                      "1 Paper Coauthored",
-                      maxLines: 1,
-                      stepGranularity: 5.0,
-                      minFontSize: 5,
-                      group: factsGroup,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: "Poppins",
-                          fontSize: 25),
+                Flexible(
+                  flex: 1,
+                  fit: FlexFit.tight,
+                  child: CircularPercentIndicator(
+                    backgroundColor: Colors.transparent,
+                    radius: MediaQuery.of(context).size.width * 0.15,
+                    center: InkWell(
+                      child: AutoSizeText(
+                        "1 Paper Coauthored",
+                        maxLines: 1,
+                        stepGranularity: 5.0,
+                        minFontSize: 5,
+                        group: factsGroup,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                            fontSize: 25),
+                      ),
+                      onTap: () => launch(
+                          'https://www.semanticscholar.org/paper/Seeds-as-a-Source-of-Plant-Inhibitory-Fungi%3A-for-Scherlag-Scherlag/64098cbc8fe4a3b1c865b0f14420fa0c689725be'),
                     ),
-                    onTap: () => launch(
-                        'https://www.semanticscholar.org/paper/Seeds-as-a-Source-of-Plant-Inhibitory-Fungi%3A-for-Scherlag-Scherlag/64098cbc8fe4a3b1c865b0f14420fa0c689725be'),
+                    animation: true,
+                    animationDuration: 1200,
+                    startAngle: 0.0,
+                    percent: 1.0,
+                    progressColor: Colors.black,
                   ),
-                  animation: true,
-                  animationDuration: 1200,
-                  startAngle: 0.0,
-                  percent: 1.0,
-                  progressColor: Colors.black,
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           );
         }
       },

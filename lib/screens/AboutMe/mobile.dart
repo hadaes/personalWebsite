@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 import 'package:personalWebsite/widgets/quick_facts.dart';
 
 class AboutMeMobile extends StatelessWidget {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
 
   AboutMeMobile(this.constraints);
 
