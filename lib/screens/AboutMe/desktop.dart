@@ -16,14 +16,17 @@ class AboutMeDesktop extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          const AutoSizeText(
-            "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
-            style: TextStyle(
-              fontSize: 30,
-              fontFamily: "Poppins",
-              color: Colors.white,
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: const AutoSizeText(
+              "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
+              style: TextStyle(
+                fontSize: 30,
+                fontFamily: "Poppins",
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.15,
