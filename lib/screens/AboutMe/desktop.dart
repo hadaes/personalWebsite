@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 import 'package:personalWebsite/widgets/quick_facts.dart';
 
 class AboutMeDesktop extends StatelessWidget {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
 
   AboutMeDesktop(this.constraints);
 
@@ -30,13 +30,12 @@ class AboutMeDesktop extends StatelessWidget {
           ),
           QuickFacts(constraints),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.15,
+            height: MediaQuery.of(context).size.height * 0.20,
           ),
           CarouselSlider(
             items: [
               const Image(image: AssetImage("assets/images/jack_plane.jpeg")),
               const Image(image: AssetImage("assets/images/jack_plane2.jpeg")),
-              const Image(image: AssetImage("assets/images/jack_plane3.jpeg")),
               const Image(image: AssetImage("assets/images/jack_plane3.jpeg")),
               const Image(image: AssetImage("assets/images/jack_middle.JPG")),
             ],
@@ -47,7 +46,7 @@ class AboutMeDesktop extends StatelessWidget {
         ],
       ),
       SizedBox(
-        height: MediaQuery.of(context).size.height * 0.05,
+        height: MediaQuery.of(context).size.height * 0.10,
       )
     ]);
   }
