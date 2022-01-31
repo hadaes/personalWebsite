@@ -9,7 +9,7 @@ During the summer of 2020 and into the fall, I developed this website using Flut
 
 Version 1.0.0: First deployment\
 Version 1.1.0: Added 'Projects/Experience' section. Updated 'About Me' section with photos and links. Minor placement adjustments\
-          -1.1.1: Added content for mobile view
+          -1.1.1: Added content for mobile view\
           -1.2.0: Added senior thesis. Fixed text sizing issues
 
 
