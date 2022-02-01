@@ -17,7 +17,54 @@ class SiteDesktop extends StatelessWidget {
               fontFamily: "Poppins",
               color: Colors.white,
             ),
-            textAlign: TextAlign.center,
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.05,
+        ),
+        Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: AutoSizeText(
+                  "Early Concepts",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Poppins",
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: Image(
+                      image: AssetImage(
+                        "assets/images/primary.jpeg",
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: Image(
+                      image: AssetImage(
+                        "assets/images/primary.jpeg",
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ],
