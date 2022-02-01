@@ -1,5 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
+import 'package:personalWebsite/widgets/timeline.dart';
+import 'package:timelines/timelines.dart';
 
 class SiteDesktop extends StatelessWidget {
   @override
@@ -64,6 +66,41 @@ class SiteDesktop extends StatelessWidget {
                   ),
                 ],
               ),
+              Column(
+                children: [
+                  TimelineTile(
+                    oppositeContents: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('opposite\ncontents'),
+                    ),
+                    contents: Card(
+                      child: Container(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('contents'),
+                      ),
+                    ),
+                    node: TimelineNode(
+                      indicator: DotIndicator(),
+                      startConnector: SolidLineConnector(),
+                      endConnector: SolidLineConnector(),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 80.0,
+                    child: TimelineNode(
+                      indicator: Card(
+                        margin: EdgeInsets.zero,
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Complex'),
+                        ),
+                      ),
+                      startConnector: DashedLineConnector(),
+                      endConnector: SolidLineConnector(),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
