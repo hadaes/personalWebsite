@@ -42,7 +42,7 @@ class _AboutMeState extends State<AboutMe> with SingleTickerProviderStateMixin {
         color: Colors.transparent.withOpacity(0.3),
         child: LayoutBuilder(
           builder: (context, constraints) {
-            if (constraints.maxWidth <= 900 || constraints.maxHeight <= 900) {
+            if (constraints.maxWidth <= 900 || constraints.maxHeight <= 600) {
               return AboutMeMobile(constraints);
             } else {
               return AboutMeDesktop(constraints);
