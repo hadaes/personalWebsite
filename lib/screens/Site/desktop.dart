@@ -65,30 +65,30 @@ class SiteDesktop extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Center(
-                child: AutoSizeText(
-                  "Timeline",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "Poppins",
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              SiteTimeline(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.10,
-              ),
             ],
           ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.05,
+        ),
+        Center(
+          child: AutoSizeText(
+            "Timeline",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontFamily: "Poppins",
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.05,
+        ),
+        SiteTimeline(),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.10,
         ),
       ],
     );
