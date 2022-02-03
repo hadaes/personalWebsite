@@ -1,7 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
-import 'package:personalWebsite/widgets/timeline.dart';
-import 'package:timelines/timelines.dart';
+import 'package:personalWebsite/widgets/site_timelime.dart';
 
 class SiteDesktop extends StatelessWidget {
   @override
@@ -66,41 +65,28 @@ class SiteDesktop extends StatelessWidget {
                   ),
                 ],
               ),
-              Column(
-                children: [
-                  TimelineTile(
-                    oppositeContents: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text('opposite\ncontents'),
-                    ),
-                    contents: Card(
-                      child: Container(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('contents'),
-                      ),
-                    ),
-                    node: TimelineNode(
-                      indicator: DotIndicator(),
-                      startConnector: SolidLineConnector(),
-                      endConnector: SolidLineConnector(),
-                    ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
+              ),
+              Center(
+                child: AutoSizeText(
+                  "Timeline",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Poppins",
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
                   ),
-                  SizedBox(
-                    height: 80.0,
-                    child: TimelineNode(
-                      indicator: Card(
-                        margin: EdgeInsets.zero,
-                        child: Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Complex'),
-                        ),
-                      ),
-                      startConnector: DashedLineConnector(),
-                      endConnector: SolidLineConnector(),
-                    ),
-                  ),
-                ],
-              )
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
+              ),
+              SiteTimeline(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.10,
+              ),
             ],
           ),
         ),
