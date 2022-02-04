@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
+import 'package:personalWebsite/widgets/site_timelime.dart';
 
 class SiteMobile extends StatelessWidget {
   @override
@@ -68,6 +69,22 @@ class SiteMobile extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.10,
+        ),
+        Center(
+          child: AutoSizeText(
+            "Timeline",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontFamily: "Poppins",
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        SiteTimeline(),
       ],
     );
   }
