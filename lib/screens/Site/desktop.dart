@@ -2,7 +2,14 @@ import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
 import 'package:personalWebsite/widgets/timeline/site_timeline.dart';
 
-class SiteDesktop extends StatelessWidget {
+class SiteDesktop extends StatefulWidget {
+  @override
+  _SiteDesktopState createState() => _SiteDesktopState();
+}
+
+class _SiteDesktopState extends State<SiteDesktop> {
+  var subTitleGroup = AutoSizeGroup();
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -23,13 +30,17 @@ class SiteDesktop extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
         ),
-        Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.width * 0.25,
+              child: Center(
                 child: AutoSizeText(
                   "Early Concepts",
+                  maxLines: 1,
+                  group: subTitleGroup,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
@@ -39,47 +50,52 @@ class SiteDesktop extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: Image(
-                      image: AssetImage(
-                        "assets/images/primary.jpeg",
-                      ),
-                      fit: BoxFit.cover,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  child: Image(
+                    image: AssetImage(
+                      "assets/images/primary.jpeg",
                     ),
+                    fit: BoxFit.cover,
                   ),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: Image(
-                      image: AssetImage(
-                        "assets/images/primary.jpeg",
-                      ),
-                      fit: BoxFit.cover,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  child: Image(
+                    image: AssetImage(
+                      "assets/images/primary.jpeg",
                     ),
+                    fit: BoxFit.cover,
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
         ),
-        Center(
-          child: AutoSizeText(
-            "Timeline",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: "Poppins",
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
+        Container(
+          height: MediaQuery.of(context).size.height * 0.05,
+          width: MediaQuery.of(context).size.width * 0.25,
+          child: Center(
+            child: AutoSizeText(
+              "Timeline",
+              group: subTitleGroup,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: "Poppins",
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
