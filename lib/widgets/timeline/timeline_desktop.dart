@@ -38,6 +38,7 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "July 30, 2020",
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
@@ -53,6 +54,7 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "First Commit",
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
@@ -159,6 +161,7 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "First Deployment",
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
@@ -194,6 +197,7 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "Today",
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
@@ -209,6 +213,7 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "Still going!",
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
