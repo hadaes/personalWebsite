@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
-import 'package:personalWebsite/widgets/site_timelime.dart';
+import 'package:personalWebsite/widgets/timeline/site_timeline.dart';
 
 class SiteDesktop extends StatelessWidget {
   @override
