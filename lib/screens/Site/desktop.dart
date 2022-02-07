@@ -20,6 +20,7 @@ class _SiteDesktopState extends State<SiteDesktop> {
         Center(
           child: AutoSizeText(
             "This website was built with Flutter and is hosted on Firebase",
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 30,
               fontFamily: "Poppins",
