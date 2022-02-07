@@ -32,6 +32,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "July 30, 2020",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -46,6 +47,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "First Commit",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -81,6 +83,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "September 2, 2020",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -95,6 +98,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "Domain Name Acquired",
+                textAlign: TextAlign.center,
                 maxLines: 2,
                 stepGranularity: 2.0,
                 style: TextStyle(
@@ -134,6 +138,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "September 4, 2020",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -144,11 +149,11 @@ class TimelineMobile extends StatelessWidget {
             endChild: Container(
               alignment: Alignment.center,
               constraints: BoxConstraints(
-                maxHeight: MediaQuery.of(context).size.height * 0.05,
-                maxWidth: MediaQuery.of(context).size.width * 0.05,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "First Deployment",
+                textAlign: TextAlign.center,
                 maxLines: 2,
                 style: TextStyle(
                   fontSize: 20,
@@ -185,6 +190,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "Today",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -199,6 +205,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "Still going!",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
