@@ -8,7 +8,7 @@ class TimelineMobile extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: MediaQuery.of(context).size.width * 0.90,
+          width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
           child: TimelineTile(
             beforeLineStyle: LineStyle(color: Colors.transparent),
@@ -18,8 +18,8 @@ class TimelineMobile extends StatelessWidget {
             lineXY: 0.5,
             indicatorStyle: IndicatorStyle(
               color: Colors.green,
-              width: 50,
-              height: 50,
+              width: MediaQuery.of(context).size.width * 0.20,
+              height: MediaQuery.of(context).size.height * 0.20,
               iconStyle: IconStyle(
                 color: Colors.white,
                 iconData: Icons.check,
@@ -28,7 +28,7 @@ class TimelineMobile extends StatelessWidget {
             startChild: Container(
               alignment: Alignment.center,
               constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.width * 0.5,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "July 30, 2020",
@@ -40,9 +40,9 @@ class TimelineMobile extends StatelessWidget {
               ),
             ),
             endChild: Container(
-              alignment: Alignment.center,
+              alignment: Alignment.centerRight,
               constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.width * 0.5,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "First Commit",
@@ -56,7 +56,7 @@ class TimelineMobile extends StatelessWidget {
           ),
         ),
         Container(
-          width: MediaQuery.of(context).size.width * 0.90,
+          width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
           child: TimelineTile(
             axis: TimelineAxis.vertical,
@@ -70,14 +70,14 @@ class TimelineMobile extends StatelessWidget {
             lineXY: 0.5,
             indicatorStyle: IndicatorStyle(
               color: Colors.yellow,
-              width: 50,
-              height: 50,
+              width: MediaQuery.of(context).size.width * 0.20,
+              height: MediaQuery.of(context).size.height * 0.20,
               iconStyle: IconStyle(iconData: Icons.money_rounded),
             ),
             startChild: Container(
               alignment: Alignment.center,
               constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.width * 0.5,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "September 2, 2020",
@@ -89,12 +89,12 @@ class TimelineMobile extends StatelessWidget {
               ),
             ),
             endChild: Container(
-              alignment: Alignment.center,
+              alignment: Alignment.centerRight,
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.width * 0.5,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
-                "Domain name purchased",
+                "Domain Name Acquired",
                 maxLines: 2,
                 stepGranularity: 2.0,
                 style: TextStyle(
@@ -107,7 +107,7 @@ class TimelineMobile extends StatelessWidget {
           ),
         ),
         Container(
-          width: MediaQuery.of(context).size.width * 0.90,
+          width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
           child: TimelineTile(
             axis: TimelineAxis.vertical,
@@ -120,8 +120,8 @@ class TimelineMobile extends StatelessWidget {
               color: Colors.white,
             ),
             indicatorStyle: IndicatorStyle(
-              width: 50,
-              height: 50,
+              width: MediaQuery.of(context).size.width * 0.20,
+              height: MediaQuery.of(context).size.height * 0.20,
               color: Colors.lightBlue,
               iconStyle: IconStyle(
                 iconData: Icons.backup,
@@ -130,7 +130,7 @@ class TimelineMobile extends StatelessWidget {
             startChild: Container(
               alignment: Alignment.center,
               constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.height * 0.5,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "September 4, 2020",
@@ -160,7 +160,7 @@ class TimelineMobile extends StatelessWidget {
           ),
         ),
         Container(
-          width: MediaQuery.of(context).size.width * 0.90,
+          width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
           child: TimelineTile(
             axis: TimelineAxis.vertical,
@@ -171,8 +171,8 @@ class TimelineMobile extends StatelessWidget {
               color: Colors.transparent,
             ),
             indicatorStyle: IndicatorStyle(
-              width: 50,
-              height: 50,
+              width: MediaQuery.of(context).size.width * 0.20,
+              height: MediaQuery.of(context).size.height * 0.20,
               color: Colors.white,
               iconStyle: IconStyle(
                 iconData: Icons.directions_run_rounded,
@@ -181,7 +181,7 @@ class TimelineMobile extends StatelessWidget {
             startChild: Container(
               alignment: Alignment.center,
               constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.width * 0.5,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "Today",
@@ -195,7 +195,7 @@ class TimelineMobile extends StatelessWidget {
             endChild: Container(
               alignment: Alignment.center,
               constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.height * 0.5,
+                maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "Still going!",

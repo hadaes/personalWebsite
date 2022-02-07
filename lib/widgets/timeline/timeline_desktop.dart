@@ -88,6 +88,7 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "September 2, 2020",
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
@@ -103,6 +104,8 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "Domain Name Acquired",
+                maxLines: 2,
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
@@ -140,6 +143,7 @@ class _TimelineDesktopState extends State<TimelineDesktop> {
               ),
               child: AutoSizeText(
                 "September 4, 2020",
+                textAlign: TextAlign.center,
                 group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
