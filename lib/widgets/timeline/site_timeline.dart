@@ -98,7 +98,7 @@ class SiteTimeline extends StatelessWidget {
                 endChild: Container(
                   alignment: Alignment.center,
                   constraints: BoxConstraints(
-                    minWidth: MediaQuery.of(context).size.width * 0.5,
+                    minHeight: MediaQuery.of(context).size.width * 0.5,
                   ),
                   child: AutoSizeText(
                     "Domain name purchased",
@@ -151,7 +151,8 @@ class SiteTimeline extends StatelessWidget {
                 endChild: Container(
                   alignment: Alignment.center,
                   constraints: BoxConstraints(
-                    minWidth: MediaQuery.of(context).size.height * 0.5,
+                    maxHeight: MediaQuery.of(context).size.height * 0.05,
+                    maxWidth: MediaQuery.of(context).size.width * 0.05,
                   ),
                   child: AutoSizeText(
                     "First Deployment",
