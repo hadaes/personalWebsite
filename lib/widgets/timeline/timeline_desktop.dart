@@ -2,11 +2,13 @@ import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
 import 'package:timeline_tile/timeline_tile.dart';
 
+class TimelineDesktop extends StatefulWidget {
+  @override
+  _TimelineDesktopState createState() => _TimelineDesktopState();
+}
 
-class TimelineDesktop extends StatelessWidget {
-  const TimelineDesktop({
-    Key key,
-  }) : super(key: key);
+class _TimelineDesktopState extends State<TimelineDesktop> {
+  var myGroup = AutoSizeGroup();
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +34,11 @@ class TimelineDesktop extends StatelessWidget {
             ),
             startChild: Container(
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
                 "July 30, 2020",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -46,10 +49,11 @@ class TimelineDesktop extends StatelessWidget {
             endChild: Container(
               alignment: Alignment.bottomCenter,
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
                 "First Commit",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -80,10 +84,11 @@ class TimelineDesktop extends StatelessWidget {
             ),
             startChild: Container(
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
                 "September 2, 2020",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -94,10 +99,11 @@ class TimelineDesktop extends StatelessWidget {
             endChild: Container(
               alignment: Alignment.bottomCenter,
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
-                "Domain name purchased",
+                "Domain Name Acquired",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -130,10 +136,11 @@ class TimelineDesktop extends StatelessWidget {
             ),
             startChild: Container(
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
                 "September 4, 2020",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -144,10 +151,11 @@ class TimelineDesktop extends StatelessWidget {
             endChild: Container(
               alignment: Alignment.bottomCenter,
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
                 "First Deployment",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -178,10 +186,11 @@ class TimelineDesktop extends StatelessWidget {
             ),
             startChild: Container(
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
                 "Today",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -192,10 +201,11 @@ class TimelineDesktop extends StatelessWidget {
             endChild: Container(
               alignment: Alignment.bottomCenter,
               constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.1,
+                maxWidth: MediaQuery.of(context).size.width * 0.22,
               ),
               child: AutoSizeText(
                 "Still going!",
+                group: myGroup,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
