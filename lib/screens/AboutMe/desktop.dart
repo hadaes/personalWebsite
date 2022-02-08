@@ -11,42 +11,38 @@ class AboutMeDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
-      Column(
-        children: [
-          SizedBox(
-            height: 10,
+      SizedBox(
+        height: 10,
+      ),
+      Container(
+        width: MediaQuery.of(context).size.width,
+        child: const AutoSizeText(
+          "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
+          style: TextStyle(
+            fontSize: 30,
+            fontFamily: "Poppins",
+            color: Colors.white,
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            child: const AutoSizeText(
-              "Originating from Oklahoma City, I am a senior at Princeton University studying computer engineering",
-              style: TextStyle(
-                fontSize: 30,
-                fontFamily: "Poppins",
-                color: Colors.white,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.15,
-          ),
-          QuickFacts(constraints),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.20,
-          ),
-          CarouselSlider(
-            items: [
-              const Image(image: AssetImage("assets/images/jack_plane.jpeg")),
-              const Image(image: AssetImage("assets/images/jack_plane2.jpeg")),
-              const Image(image: AssetImage("assets/images/jack_plane3.jpeg")),
-              const Image(image: AssetImage("assets/images/jack_middle.JPG")),
-            ],
-            options: CarouselOptions(
-              autoPlay: true,
-            ),
-          )
+          textAlign: TextAlign.center,
+        ),
+      ),
+      SizedBox(
+        height: MediaQuery.of(context).size.height * 0.05,
+      ),
+      QuickFacts(constraints),
+      SizedBox(
+        height: MediaQuery.of(context).size.height * 0.05,
+      ),
+      CarouselSlider(
+        items: [
+          const Image(image: AssetImage("assets/images/jack_plane.jpeg")),
+          const Image(image: AssetImage("assets/images/jack_plane2.jpeg")),
+          const Image(image: AssetImage("assets/images/jack_plane3.jpeg")),
+          const Image(image: AssetImage("assets/images/jack_middle.JPG")),
         ],
+        options: CarouselOptions(
+          autoPlay: true,
+        ),
       ),
       SizedBox(
         height: MediaQuery.of(context).size.height * 0.10,
