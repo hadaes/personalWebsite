@@ -61,7 +61,7 @@ class SiteMobile extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.9,
                     child: Image(
                       image: AssetImage(
-                        "assets/images/primary.jpeg",
+                        "assets/images/early_concept.png",
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -73,7 +73,7 @@ class SiteMobile extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.9,
                     child: Image(
                       image: AssetImage(
-                        "assets/images/primary.jpeg",
+                        "assets/images/early_concept_2.png",
                       ),
                       fit: BoxFit.cover,
                     ),

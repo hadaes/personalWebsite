@@ -62,7 +62,7 @@ class _SiteDesktopState extends State<SiteDesktop> {
                   width: MediaQuery.of(context).size.width * 0.4,
                   child: Image(
                     image: AssetImage(
-                      "assets/images/primary.jpeg",
+                      "assets/images/early_concept.png",
                     ),
                     fit: BoxFit.cover,
                   ),
@@ -71,7 +71,7 @@ class _SiteDesktopState extends State<SiteDesktop> {
                   width: MediaQuery.of(context).size.width * 0.4,
                   child: Image(
                     image: AssetImage(
-                      "assets/images/primary.jpeg",
+                      "assets/images/early_concept_2.png",
                     ),
                     fit: BoxFit.cover,
                   ),
