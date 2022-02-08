@@ -2,7 +2,14 @@ import 'package:auto_size_text/auto_size_text.dart';
 import "package:flutter/material.dart";
 import 'package:timeline_tile/timeline_tile.dart';
 
-class TimelineMobile extends StatelessWidget {
+class TimelineMobile extends StatefulWidget {
+  @override
+  _TimelineMobileState createState() => _TimelineMobileState();
+}
+
+class _TimelineMobileState extends State<TimelineMobile> {
+  var timelineText = AutoSizeGroup();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,6 +40,7 @@ class TimelineMobile extends StatelessWidget {
               child: AutoSizeText(
                 "July 30, 2020",
                 textAlign: TextAlign.center,
+                group: timelineText,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -41,12 +49,13 @@ class TimelineMobile extends StatelessWidget {
               ),
             ),
             endChild: Container(
-              alignment: Alignment.centerRight,
+              alignment: Alignment.center,
               constraints: BoxConstraints(
                 maxHeight: MediaQuery.of(context).size.height * 0.20,
               ),
               child: AutoSizeText(
                 "First Commit",
+                group: timelineText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
@@ -83,6 +92,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "September 2, 2020",
+                group: timelineText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
@@ -98,6 +108,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "Domain Name Acquired",
+                group: timelineText,
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 stepGranularity: 2.0,
@@ -138,6 +149,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "September 4, 2020",
+                group: timelineText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
@@ -154,6 +166,7 @@ class TimelineMobile extends StatelessWidget {
               child: AutoSizeText(
                 "First Deployment",
                 textAlign: TextAlign.center,
+                group: timelineText,
                 maxLines: 2,
                 style: TextStyle(
                   fontSize: 20,
@@ -191,6 +204,7 @@ class TimelineMobile extends StatelessWidget {
               child: AutoSizeText(
                 "Today",
                 textAlign: TextAlign.center,
+                group: timelineText,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -205,6 +219,7 @@ class TimelineMobile extends StatelessWidget {
               ),
               child: AutoSizeText(
                 "Still going!",
+                group: timelineText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
