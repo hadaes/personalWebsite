@@ -11,6 +11,7 @@ Version 1.0.0: First deployment\
 Version 1.1.0: Added 'Projects/Experience' section. Updated 'About Me' section with photos and links. Minor placement adjustments\
           -1.1.1: Added content for mobile view\
           -1.2.0: Added senior thesis. Fixed text sizing issues
+          -1.3.0: Added content to "About This Site"
 
 
 # ---
