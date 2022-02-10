@@ -6,7 +6,7 @@ class SiteMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      cacheExtent: MediaQuery.of(context).size.height * 0.5,
+      cacheExtent: MediaQuery.of(context).size.height,
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
